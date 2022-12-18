@@ -21,7 +21,7 @@ namespace DietProject.Entities
 
         public string Ege { get; }
 
-        
+       
 
 
 
