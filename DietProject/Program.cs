@@ -18,6 +18,8 @@ namespace DietProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            string name = "ege";
+
            
             string name = "batuhan";
         }
