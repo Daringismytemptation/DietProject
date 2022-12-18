@@ -20,12 +20,7 @@ namespace DietProject
             Application.Run(new Form1());
             int a = 7;
             int d = 9;
-<<<<<<< HEAD
 
-
-=======
-            int e = 8;
->>>>>>> 91f6099ae5cc94bed58eea40260ea8f201beef8c
         }
     }
 }
