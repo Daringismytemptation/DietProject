@@ -20,7 +20,7 @@ namespace DietProject
             Application.Run(new Form1());
             int a = 7;
             int d = 9;
-            int 3 = 8;
+            int e = 8;
         }
     }
 }
