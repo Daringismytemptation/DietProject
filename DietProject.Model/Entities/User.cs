@@ -19,7 +19,7 @@ namespace DietProject.Entities
 
         public GenderEnum Gender { get; set; }
 
-        public string Ege { get; }
+        
 
         
 
