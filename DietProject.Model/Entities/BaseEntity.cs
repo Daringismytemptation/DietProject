@@ -10,5 +10,6 @@ namespace DietProject.Model.Entities
     {
         public int Id { get; set; }
         public DateTime CreationDate { get; set; }
+        
     }
 }
