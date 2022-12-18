@@ -10,9 +10,21 @@ namespace DietProject.Entities
     public class Password:BaseEntity
     {
         
-        public string PasswordUser { get; set; }
+        public string UserPassword { get; set; }
 
-        
+
+        //navigation
+        public int? UserID { get; set; }
+        public virtual User User { get; set; }
+
+
+
+
+
+
+
+
+
 
 
     }

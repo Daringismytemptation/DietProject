@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Enum
 {
-	enum EnumUser
+	public enum EnumUser
 	{
-		Admin,
+		Admin=1,
 		Users
 	}
 }

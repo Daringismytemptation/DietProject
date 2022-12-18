@@ -17,11 +17,34 @@ namespace DietProject.Entities
 
         public string Email { get; set; }
 
+        public int Age { get; set; }   
+
+        public EnumUser UserType { get; set; }
+
+        public bool IsActive { get; set; }  // admin tarafından onaylı mı ?
         public GenderEnum Gender { get; set; }
 
-        public int Deneme { get; set; }
+        //navigation
+        public virtual ICollection<Password> Passwords { get; set; }
 
-        public int Deneme2 { get; set; }
+        public virtual ICollection<Meal> Meals { get; set; }
+
+        public virtual ICollection<FoodDetail> FoodDetails { get; set; }
+
+        public virtual ICollection<ExtraFood> ExtraFoods { get; set; }
+
+        public User()
+        {
+            Passwords= new HashSet<Password>();
+            Meals= new HashSet<Meal>();
+            FoodDetails= new HashSet<FoodDetail>();
+            ExtraFoods= new HashSet<ExtraFood>();
+
+        }
+
+
+
+
 
 
 

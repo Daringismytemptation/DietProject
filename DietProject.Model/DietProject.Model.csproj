@@ -42,10 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\ExtraFood.cs" />
     <Compile Include="Entities\Food.cs" />
-    <Compile Include="Entities\FoodDetails.cs" />
-    <Compile Include="Entities\Kategori.cs" />
+    <Compile Include="Entities\FoodDetail.cs" />
     <Compile Include="Entities\Meal.cs" />
     <Compile Include="Entities\Password.cs" />
     <Compile Include="Entities\User.cs" />

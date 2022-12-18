@@ -7,20 +7,25 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class Meal : BaseEntity
+    public class FoodDetail:BaseEntity
     {
-        public string MealName { get; set; }
+        public decimal Calorie { get; set; }
 
-        //navigation
+        public decimal Portion { get; set; }
 
-        public virtual ICollection<User> Users { get; set; }
+        //navigations
 
         public virtual ICollection<Food> Foods { get; set; }
 
-        public Meal()
+        public  int? UserID { get; set; }
+        public virtual User User { get; set; }
+
+
+        public FoodDetail()
         {
-            Users=new HashSet<User>();
             Foods=new HashSet<Food>();
         }
+
+
     }
 }
