@@ -19,9 +19,10 @@ namespace DietProject.Entities
 
         public GenderEnum Gender { get; set; }
 
-        
+        public string selam { get; set; }
 
-       
+
+
 
 
 
