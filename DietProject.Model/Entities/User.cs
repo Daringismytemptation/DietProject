@@ -1,4 +1,5 @@
 ﻿using DietProject.Model.Entities;
+using DietProject.Model.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace DietProject.Entities
 
         public string Email { get; set; }
 
-        public EnumGender Gender { get; set; }
+        public GenderEnum Gender { get; set; }
 
         
 
