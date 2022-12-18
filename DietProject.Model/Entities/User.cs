@@ -19,9 +19,9 @@ namespace DietProject.Entities
 
         public GenderEnum Gender { get; set; }
 
-        public int Deneme { get; set; } 
+        public int Deneme { get; set; }
 
-        
+        public int Deneme2 { get; set; }
 
 
 
