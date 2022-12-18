@@ -21,7 +21,7 @@ namespace DietProject
             string name = "ege";
 
            
-            string name = "batuhan";
+            string name2 = "batuhan";
         }
     }
 }
