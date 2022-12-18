@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace DietProject.Entities
+namespace DietProject.Model.Entities
 {
     public class User:BaseEntity
     {
@@ -31,14 +31,12 @@ namespace DietProject.Entities
 
         public virtual ICollection<FoodDetail> FoodDetails { get; set; }
 
-        public virtual ICollection<ExtraFood> ExtraFoods { get; set; }
 
         public User()
         {
             Passwords= new HashSet<Password>();
             Meals= new HashSet<Meal>();
             FoodDetails= new HashSet<FoodDetail>();
-            ExtraFoods= new HashSet<ExtraFood>();
 
         }
 

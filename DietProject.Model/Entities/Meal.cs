@@ -1,5 +1,4 @@
-﻿using DietProject.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +15,8 @@ namespace DietProject.Model.Entities
         public virtual ICollection<User> Users { get; set; }
 
         public virtual ICollection<Food> Foods { get; set; }
+        public int? ExtraCalorieID { get; set; }
+        public virtual ExtraCalorie ExtraCalorie { get; set; }
 
         public Meal()
         {

@@ -1,5 +1,4 @@
-﻿using DietProject.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class ExtraFood
+    public class ExtraCalorie
     {
         public decimal Calorie { get; set; }
 
         //navigation
+        public virtual ICollection<Meal> Meals { get; set; }
 
-        public virtual ICollection<User> Users { get; set; }
-
-        public ExtraFood()
+        public ExtraCalorie()
         {
-            Users= new HashSet<User>();
+            Meals = new HashSet<Meal>();
         }
 
        
