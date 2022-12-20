@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DietProject
 {
-    public partial class Form1 : Form
+    public partial class FrmHakkinda : Form
     {
-        public Form1()
+        public FrmHakkinda()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hazırlayanlar:\n , \n , \n , \n ");
         }
     }
 }
