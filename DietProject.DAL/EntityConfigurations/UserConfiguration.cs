@@ -20,15 +20,15 @@ namespace DietProject.DAL.EntityConfigurations
 
             Property(a => a.Age).IsRequired();
 
-            //relations
+            // Relations
 
-            //password onetomany
+            // Password one to many
             HasMany(a => a.Passwords).WithRequired(b => b.User).HasForeignKey(c => c.UserID);
 
-            //food detail onetomany
+            // Food Details one to many
             HasMany(a => a.FoodDetails).WithRequired(a => a.User).HasForeignKey(c => c.UserID);
 
-            //meal manytomany
+            // Meal many to many
             HasMany(a => a.Meals).WithMany(b => b.Users);
 
 

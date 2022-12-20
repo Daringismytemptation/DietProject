@@ -8,9 +8,17 @@ namespace DietProject.Model.Entities
 {
     public class Meal : BaseEntity
     {
+        public Meal()
+        {
+            Users = new HashSet<User>();
+            Foods = new HashSet<Food>();
+        }
+
+
         public string MealName { get; set; }
 
-        //navigation
+
+        // Navigations
 
         public virtual ICollection<User> Users { get; set; }
 
@@ -18,10 +26,6 @@ namespace DietProject.Model.Entities
         public int? ExtraCalorieID { get; set; }
         public virtual ExtraCalorie ExtraCalorie { get; set; }
 
-        public Meal()
-        {
-            Users=new HashSet<User>();
-            Foods=new HashSet<Food>();
-        }
+    
     }
 }

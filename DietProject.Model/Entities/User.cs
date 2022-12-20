@@ -11,7 +11,15 @@ namespace DietProject.Model.Entities
 {
     public class User:BaseEntity
     {
-      
+        public User()
+        {
+            Passwords = new HashSet<Password>();
+            Meals = new HashSet<Meal>();
+            FoodDetails = new HashSet<FoodDetail>();
+
+        }
+
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
@@ -21,33 +29,17 @@ namespace DietProject.Model.Entities
 
         public EnumUser UserType { get; set; }
 
-        public bool IsActive { get; set; }  // admin tarafından onaylı mı ?
+        public bool IsActive { get; set; }  // Admin tarafından onaylı mı?
         public GenderEnum Gender { get; set; }
 
-        //navigation
+
+        // Navigations
+
         public virtual ICollection<Password> Passwords { get; set; }
 
         public virtual ICollection<Meal> Meals { get; set; }
 
         public virtual ICollection<FoodDetail> FoodDetails { get; set; }
-
-
-        public User()
-        {
-            Passwords= new HashSet<Password>();
-            Meals= new HashSet<Meal>();
-            FoodDetails= new HashSet<FoodDetail>();
-
-        }
-
-
-
-
-
-
-
-
-
 
     }
 }

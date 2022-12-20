@@ -8,19 +8,15 @@ namespace DietProject.Model.Entities
 {
     public class Category:BaseEntity
     {
-        public string Name { get; set; }
-
-        //navigations
-
-        public virtual ICollection<Food> Foods { get; set; }
-
         public Category()
         {
-            Foods=new HashSet<Food>();
+            Foods = new HashSet<Food>();
         }
 
+        public string Name { get; set; }
 
-
+        // Navigation
+        public virtual ICollection<Food> Foods { get; set; }
 
     }
 }

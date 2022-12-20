@@ -12,7 +12,7 @@ namespace DietProject.DAL.EntityConfigurations
     {
         public PasswordConfiguration()
         {
-            //user onetomany
+            //User one to many
             Property(a => a.UserPassword).IsRequired().HasMaxLength(20);
             HasRequired(a => a.User).WithMany(a => a.Passwords).HasForeignKey(a => a.UserID);
         }

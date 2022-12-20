@@ -11,7 +11,7 @@ namespace DietProject.DAL
 {
     public class CalorieDBContext:DbContext
     {
-        public CalorieDBContext() : base("Data Source=BATUHAN;Initial Catalog=4DenemeDb;Integrated Security=true;")
+        public CalorieDBContext() : base("Data Source=DESKTOP-UDDU8J5;Initial Catalog=CeliacDietProject;Integrated Security=true;")
         {
 
         }
