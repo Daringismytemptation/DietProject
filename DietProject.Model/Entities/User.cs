@@ -19,13 +19,14 @@ namespace DietProject.Model.Entities
 
         }
 
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
         public string Email { get; set; }
 
-        public int Age { get; set; }   
+        public int Age { get; set; }
+        public decimal Weight { get; set; }
+        public decimal Height { get; set; }
 
         public EnumUser UserType { get; set; }
 

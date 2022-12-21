@@ -41,5 +41,11 @@ namespace DietProject.DAL.Repositories
             return context.SaveChanges() > 0;
 
         }
+        public bool Update(ExtraCalorie extraCalorie)
+        {
+            ExtraCalorie updateExtraCalorie = GetByExtraCalorieId(extraCalorie.ID);
+            updateExtraCalorie.Calorie = extraCalorie.Calorie;
+            return context.SaveChanges() > 0;
+        }
     }
 }
