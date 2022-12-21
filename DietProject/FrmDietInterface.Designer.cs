@@ -47,10 +47,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvOneriler = new System.Windows.Forms.DataGridView();
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnOgun = new System.Windows.Forms.Button();
+            this.btnKategori = new System.Windows.Forms.Button();
+            this.btnAdi = new System.Windows.Forms.Button();
+            this.btnPorsiyon = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
             this.dgvKullanici = new System.Windows.Forms.DataGridView();
@@ -106,10 +106,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvKullanici);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnPorsiyon);
+            this.groupBox2.Controls.Add(this.btnAdi);
+            this.groupBox2.Controls.Add(this.btnKategori);
+            this.groupBox2.Controls.Add(this.btnOgun);
             this.groupBox2.Controls.Add(this.btnSil);
             this.groupBox2.Controls.Add(this.btnEkle);
             this.groupBox2.Controls.Add(this.btnGuncelle);
@@ -271,45 +271,45 @@
             this.btnMenudeOlmayanOneriler.Text = "Menüde Olmayan Öneriler";
             this.btnMenudeOlmayanOneriler.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnOgun
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(236, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 20);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "...\r\n";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOgun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOgun.Location = new System.Drawing.Point(236, 128);
+            this.btnOgun.Name = "btnOgun";
+            this.btnOgun.Size = new System.Drawing.Size(27, 20);
+            this.btnOgun.TabIndex = 4;
+            this.btnOgun.Text = "...\r\n";
+            this.btnOgun.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnKategori
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(236, 158);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 20);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "...\r\n";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKategori.Location = new System.Drawing.Point(236, 158);
+            this.btnKategori.Name = "btnKategori";
+            this.btnKategori.Size = new System.Drawing.Size(27, 20);
+            this.btnKategori.TabIndex = 10;
+            this.btnKategori.Text = "...\r\n";
+            this.btnKategori.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAdi
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(236, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(27, 20);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "...\r\n";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAdi.Location = new System.Drawing.Point(236, 188);
+            this.btnAdi.Name = "btnAdi";
+            this.btnAdi.Size = new System.Drawing.Size(27, 20);
+            this.btnAdi.TabIndex = 11;
+            this.btnAdi.Text = "...\r\n";
+            this.btnAdi.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnPorsiyon
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(236, 218);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 20);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "...\r\n";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnPorsiyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPorsiyon.Location = new System.Drawing.Point(236, 218);
+            this.btnPorsiyon.Name = "btnPorsiyon";
+            this.btnPorsiyon.Size = new System.Drawing.Size(27, 20);
+            this.btnPorsiyon.TabIndex = 12;
+            this.btnPorsiyon.Text = "...\r\n";
+            this.btnPorsiyon.UseVisualStyleBackColor = true;
             // 
             // btnHaftalikRapor
             // 
@@ -387,10 +387,10 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPorsiyon;
+        private System.Windows.Forms.Button btnAdi;
+        private System.Windows.Forms.Button btnKategori;
+        private System.Windows.Forms.Button btnOgun;
         private System.Windows.Forms.Button btnHaftalikRapor;
         private System.Windows.Forms.Button btnAylikRapor;
         private System.Windows.Forms.DataGridView dgvKullanici;
