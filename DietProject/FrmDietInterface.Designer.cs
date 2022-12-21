@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnKaydet = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -41,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbPorsiyon = new System.Windows.Forms.ComboBox();
-            this.cmbAdı = new System.Windows.Forms.ComboBox();
+            this.cmbAdi = new System.Windows.Forms.ComboBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             this.cmbOgunler = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -54,6 +53,7 @@
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
             this.dgvKullanici = new System.Windows.Forms.DataGridView();
+            this.btnKaydet = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -63,7 +63,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnKaydet);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpTarih);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -74,23 +73,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tarih";
             // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.Red;
-            this.btnKaydet.Location = new System.Drawing.Point(165, 93);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(75, 23);
-            this.btnKaydet.TabIndex = 2;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(15, 66);
+            this.label1.Location = new System.Drawing.Point(15, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 13);
             this.label1.TabIndex = 1;
@@ -98,13 +86,14 @@
             // 
             // dtpTarih
             // 
-            this.dtpTarih.Location = new System.Drawing.Point(16, 29);
+            this.dtpTarih.Location = new System.Drawing.Point(16, 43);
             this.dtpTarih.Name = "dtpTarih";
             this.dtpTarih.Size = new System.Drawing.Size(211, 20);
             this.dtpTarih.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnKaydet);
             this.groupBox2.Controls.Add(this.dgvKullanici);
             this.groupBox2.Controls.Add(this.btnPorsiyon);
             this.groupBox2.Controls.Add(this.btnAdi);
@@ -118,7 +107,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cmbPorsiyon);
-            this.groupBox2.Controls.Add(this.cmbAdı);
+            this.groupBox2.Controls.Add(this.cmbAdi);
             this.groupBox2.Controls.Add(this.cmbKategoriler);
             this.groupBox2.Controls.Add(this.cmbOgunler);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -218,13 +207,13 @@
             this.cmbPorsiyon.Size = new System.Drawing.Size(121, 21);
             this.cmbPorsiyon.TabIndex = 3;
             // 
-            // cmbAdı
+            // cmbAdi
             // 
-            this.cmbAdı.FormattingEnabled = true;
-            this.cmbAdı.Location = new System.Drawing.Point(33, 190);
-            this.cmbAdı.Name = "cmbAdı";
-            this.cmbAdı.Size = new System.Drawing.Size(121, 21);
-            this.cmbAdı.TabIndex = 2;
+            this.cmbAdi.FormattingEnabled = true;
+            this.cmbAdi.Location = new System.Drawing.Point(33, 190);
+            this.cmbAdi.Name = "cmbAdi";
+            this.cmbAdi.Size = new System.Drawing.Size(121, 21);
+            this.cmbAdi.TabIndex = 2;
             // 
             // cmbKategoriler
             // 
@@ -339,8 +328,19 @@
             this.dgvKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKullanici.Location = new System.Drawing.Point(300, 41);
             this.dgvKullanici.Name = "dgvKullanici";
-            this.dgvKullanici.Size = new System.Drawing.Size(592, 286);
+            this.dgvKullanici.Size = new System.Drawing.Size(592, 338);
             this.dgvKullanici.TabIndex = 13;
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.ForeColor = System.Drawing.Color.Red;
+            this.btnKaydet.Location = new System.Drawing.Point(796, 570);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(96, 47);
+            this.btnKaydet.TabIndex = 14;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
             // 
             // FrmInterface
             // 
@@ -369,7 +369,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpTarih;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -381,7 +380,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbPorsiyon;
-        private System.Windows.Forms.ComboBox cmbAdı;
+        private System.Windows.Forms.ComboBox cmbAdi;
         private System.Windows.Forms.ComboBox cmbKategoriler;
         private System.Windows.Forms.ComboBox cmbOgunler;
         private System.Windows.Forms.Button btnSil;
@@ -394,5 +393,6 @@
         private System.Windows.Forms.Button btnHaftalikRapor;
         private System.Windows.Forms.Button btnAylikRapor;
         private System.Windows.Forms.DataGridView dgvKullanici;
+        private System.Windows.Forms.Button btnKaydet;
     }
 }
