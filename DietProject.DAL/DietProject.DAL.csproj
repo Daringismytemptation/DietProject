@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalorieDBContext.cs" />
+    <Compile Include="CaloriesDBContext.cs" />
     <Compile Include="EntityConfigurations\CategoryConfiguration.cs" />
     <Compile Include="EntityConfigurations\ExtraCalorieConfiguration.cs" />
     <Compile Include="EntityConfigurations\FoodConfiguration.cs" />
@@ -60,6 +60,13 @@
     <Compile Include="EntityConfigurations\PasswordConfiguration.cs" />
     <Compile Include="EntityConfigurations\UserConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\ExtraCalorieRepository.cs" />
+    <Compile Include="Repositories\FoodDetailRepository.cs" />
+    <Compile Include="Repositories\FoodRepository.cs" />
+    <Compile Include="Repositories\MealRepository.cs" />
+    <Compile Include="Repositories\PasswordRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Strategy\CaloriesStrategy.cs" />
   </ItemGroup>
   <ItemGroup>

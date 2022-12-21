@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class ExtraCalorie
+    public class ExtraCalorie:BaseEntity
     {
         public ExtraCalorie()
         {

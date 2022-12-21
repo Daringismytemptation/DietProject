@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DietProject.DAL
 {
-    public class CalorieDBContext:DbContext
+    public class CaloriesDBContext:DbContext
     {
-        public CalorieDBContext() : base("Data Source=.;Initial Catalog=CeliacDietProject;Integrated Security=true;")
+        public CaloriesDBContext() : base("Data Source=.;Initial Catalog=CeliacDietProject;Integrated Security=true;")
         {
 
         }

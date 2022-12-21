@@ -23,6 +23,7 @@ namespace DietProject.Model.Entities
         public virtual ICollection<User> Users { get; set; }
 
         public virtual ICollection<Food> Foods { get; set; }
+
         public int? ExtraCalorieID { get; set; }
         public virtual ExtraCalorie ExtraCalorie { get; set; }
 
