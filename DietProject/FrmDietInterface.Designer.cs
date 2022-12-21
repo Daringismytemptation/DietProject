@@ -36,11 +36,6 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.lvKullaniciDiyet = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,10 +47,18 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvOneriler = new System.Windows.Forms.DataGridView();
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnHaftalikRapor = new System.Windows.Forms.Button();
+            this.btnAylikRapor = new System.Windows.Forms.Button();
+            this.dgvKullanici = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -102,10 +105,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dgvKullanici);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnSil);
             this.groupBox2.Controls.Add(this.btnEkle);
             this.groupBox2.Controls.Add(this.btnGuncelle);
-            this.groupBox2.Controls.Add(this.lvKullaniciDiyet);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -155,48 +162,11 @@
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // lvKullaniciDiyet
-            // 
-            this.lvKullaniciDiyet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lvKullaniciDiyet.ForeColor = System.Drawing.Color.Black;
-            this.lvKullaniciDiyet.GridLines = true;
-            this.lvKullaniciDiyet.HideSelection = false;
-            this.lvKullaniciDiyet.Location = new System.Drawing.Point(289, 27);
-            this.lvKullaniciDiyet.Name = "lvKullaniciDiyet";
-            this.lvKullaniciDiyet.Size = new System.Drawing.Size(592, 287);
-            this.lvKullaniciDiyet.TabIndex = 7;
-            this.lvKullaniciDiyet.UseCompatibleStateImageBehavior = false;
-            this.lvKullaniciDiyet.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Öğün";
-            this.columnHeader1.Width = 101;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Kategori";
-            this.columnHeader2.Width = 106;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Adı";
-            this.columnHeader3.Width = 192;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Porsiyon";
-            this.columnHeader4.Width = 189;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.Green;
+            this.label5.ForeColor = System.Drawing.Color.OliveDrab;
             this.label5.Location = new System.Drawing.Point(175, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
@@ -208,7 +178,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.Green;
+            this.label4.ForeColor = System.Drawing.Color.OliveDrab;
             this.label4.Location = new System.Drawing.Point(175, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
@@ -220,7 +190,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.Green;
+            this.label3.ForeColor = System.Drawing.Color.OliveDrab;
             this.label3.Location = new System.Drawing.Point(175, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
@@ -232,7 +202,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.ForeColor = System.Drawing.Color.OliveDrab;
             this.label2.Location = new System.Drawing.Point(175, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
@@ -301,11 +271,84 @@
             this.btnMenudeOlmayanOneriler.Text = "Menüde Olmayan Öneriler";
             this.btnMenudeOlmayanOneriler.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(236, 128);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 20);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "...\r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(236, 158);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 20);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "...\r\n";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.Location = new System.Drawing.Point(236, 188);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(27, 20);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "...\r\n";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.Location = new System.Drawing.Point(236, 218);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(27, 20);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "...\r\n";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // btnHaftalikRapor
+            // 
+            this.btnHaftalikRapor.BackColor = System.Drawing.Color.Transparent;
+            this.btnHaftalikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHaftalikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnHaftalikRapor.Location = new System.Drawing.Point(13, 589);
+            this.btnHaftalikRapor.Name = "btnHaftalikRapor";
+            this.btnHaftalikRapor.Size = new System.Drawing.Size(104, 63);
+            this.btnHaftalikRapor.TabIndex = 4;
+            this.btnHaftalikRapor.Text = "Haftalık Rapor\r\n";
+            this.btnHaftalikRapor.UseVisualStyleBackColor = false;
+            // 
+            // btnAylikRapor
+            // 
+            this.btnAylikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAylikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnAylikRapor.Location = new System.Drawing.Point(158, 589);
+            this.btnAylikRapor.Name = "btnAylikRapor";
+            this.btnAylikRapor.Size = new System.Drawing.Size(104, 63);
+            this.btnAylikRapor.TabIndex = 5;
+            this.btnAylikRapor.Text = "Aylık Rapor\r\n";
+            this.btnAylikRapor.UseVisualStyleBackColor = true;
+            // 
+            // dgvKullanici
+            // 
+            this.dgvKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKullanici.Location = new System.Drawing.Point(300, 41);
+            this.dgvKullanici.Name = "dgvKullanici";
+            this.dgvKullanici.Size = new System.Drawing.Size(592, 286);
+            this.dgvKullanici.TabIndex = 13;
+            // 
             // FrmInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 681);
+            this.Controls.Add(this.btnAylikRapor);
+            this.Controls.Add(this.btnHaftalikRapor);
             this.Controls.Add(this.btnMenudeOlmayanOneriler);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -318,6 +361,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,11 +376,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvOneriler;
         private System.Windows.Forms.Button btnMenudeOlmayanOneriler;
-        private System.Windows.Forms.ListView lvKullaniciDiyet;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -348,5 +387,12 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHaftalikRapor;
+        private System.Windows.Forms.Button btnAylikRapor;
+        private System.Windows.Forms.DataGridView dgvKullanici;
     }
 }
