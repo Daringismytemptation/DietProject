@@ -8,15 +8,17 @@ namespace DietProject.Model.Entities
 {
     public class ExtraCalorie
     {
-        public decimal Calorie { get; set; }
-
-        //navigation
-        public virtual ICollection<Meal> Meals { get; set; }
-
         public ExtraCalorie()
         {
             Meals = new HashSet<Meal>();
         }
+
+        public decimal Calorie { get; set; }
+
+
+        // Navigation
+
+        public virtual ICollection<Meal> Meals { get; set; }
 
        
     }

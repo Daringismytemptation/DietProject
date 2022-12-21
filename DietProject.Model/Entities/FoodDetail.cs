@@ -8,11 +8,17 @@ namespace DietProject.Model.Entities
 {
     public class FoodDetail:BaseEntity
     {
+        public FoodDetail()
+        {
+            Foods = new HashSet<Food>();
+        }
+
+
         public decimal Calorie { get; set; }
 
         public decimal Portion { get; set; }
 
-        //navigations
+        // Navigations
 
         public virtual ICollection<Food> Foods { get; set; }
 
@@ -20,10 +26,6 @@ namespace DietProject.Model.Entities
         public virtual User User { get; set; }
 
 
-        public FoodDetail()
-        {
-            Foods=new HashSet<Food>();
-        }
 
 
     }

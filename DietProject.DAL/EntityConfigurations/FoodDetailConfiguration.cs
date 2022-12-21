@@ -12,9 +12,10 @@ namespace DietProject.DAL.EntityConfigurations
     {
         public FoodDetailConfiguration()
         {
-            //user onetomany
+            // User one to many
             HasRequired(a => a.User).WithMany(a => a.FoodDetails).HasForeignKey(a => a.UserID);
-            //food manytomany
+
+            // Food many to many
             HasMany(a => a.Foods).WithMany(a => a.FoodDetails);
         }
     }

@@ -12,10 +12,10 @@ namespace DietProject.DAL.EntityConfigurations
     {
         public MealConfiguration()
         {
-            //foods manytomany
+            //Foods many to many
             HasMany(a => a.Foods).WithMany(a => a.Meals);
 
-            //extra oneTomany
+            //Extra one to many
             HasRequired(a => a.ExtraCalorie).WithMany(a => a.Meals).HasForeignKey(a => a.ExtraCalorieID);
         }
     }

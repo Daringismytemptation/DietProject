@@ -12,7 +12,7 @@ namespace DietProject.DAL.EntityConfigurations
     {
         public CategoryConfiguration()
         {
-            //foods onetomany
+            // Foods one to many
             HasMany(a => a.Foods).WithRequired(b => b.Category).HasForeignKey(a => a.CategoryID);
         }
     }

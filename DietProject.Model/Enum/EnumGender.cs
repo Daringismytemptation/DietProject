@@ -8,7 +8,7 @@ namespace DietProject.Model.Enum
 {
 	public enum GenderEnum
 	{
-		Male,
+		Male=1,
 		Female
 	}
 }

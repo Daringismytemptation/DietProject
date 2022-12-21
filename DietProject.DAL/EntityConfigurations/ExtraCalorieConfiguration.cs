@@ -12,7 +12,7 @@ namespace DietProject.DAL.EntityConfigurations
     {
         public ExtraCalorieConfiguration()
         {
-            //onetomany
+            // One to many
             HasMany(a => a.Meals).WithRequired(a => a.ExtraCalorie).HasForeignKey(a => a.ExtraCalorieID);
         }
     }

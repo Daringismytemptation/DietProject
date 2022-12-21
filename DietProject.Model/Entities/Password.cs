@@ -12,18 +12,9 @@ namespace DietProject.Model.Entities
         public string UserPassword { get; set; }
 
 
-        //navigation
+        // Navigations
         public int? UserID { get; set; }
         public virtual User User { get; set; }
-
-
-
-
-
-
-
-
-
 
 
     }
