@@ -37,10 +37,12 @@ namespace DietProject
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
+      
             FrmGirisYap girisYap = new FrmGirisYap();
             this.Hide();
             girisYap.ShowDialog();
             this.Show();
+
         }
     }
 }

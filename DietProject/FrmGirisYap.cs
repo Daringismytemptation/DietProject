@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DietProject.BLL.Services;
+using DietProject.Model.Entities;
+using DietProject.Model.Enum;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,7 @@ namespace DietProject
 {
     public partial class FrmGirisYap : Form
     {
+        UserService userService;
         public FrmGirisYap()
         {
             InitializeComponent();
@@ -19,9 +23,50 @@ namespace DietProject
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            FrmKarsilamaEkrani karsilamaEkrani = new FrmKarsilamaEkrani();
-            this.Hide();
-            karsilamaEkrani.ShowDialog();
+            string kullaniciAdi = txtKullaniciAdi.Text;
+            string sifre = txtSifre.Text;
+            
+            try
+            {
+                userService = new UserService();
+                User user = userService.CheckLogin(kullaniciAdi, sifre);
+                if (user != null)
+                {
+                    if (!user.IsActive)
+                    {
+                        MessageBox.Show("Kullanıcı henüz Admin tarafından onaylanmamış");
+                        return;
+                    }
+                    switch (user.UserType)
+                    {
+                        case EnumUser.Admin:
+                            FrmAdmin adminForm = new FrmAdmin();
+                            this.Hide();
+                            adminForm.ShowDialog();
+                            this.Show();
+                            break;
+                        case EnumUser.Users:
+                            FrmKarsilamaEkrani frmKarsilama = new FrmKarsilamaEkrani();
+                            this.Hide();
+                            frmKarsilama.ShowDialog();
+                            this.Show();
+                            break;
+
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen bilgilerinizi doğru giriniz");
+                }
+            }
+            catch (Exception ex)
+            {
+
+               MessageBox.Show(ex.Message);
+            }
+
+            
         }
     }
 }
