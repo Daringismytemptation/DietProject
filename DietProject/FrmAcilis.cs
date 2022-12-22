@@ -41,6 +41,7 @@ namespace DietProject
             this.Hide();
             girisYap.ShowDialog();
             this.Show();
+            // .
         }
     }
 }

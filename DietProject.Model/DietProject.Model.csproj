@@ -46,6 +46,7 @@
     <Compile Include="Entities\ExtraCalorie.cs" />
     <Compile Include="Entities\Food.cs" />
     <Compile Include="Entities\FoodDetail.cs" />
+    <Compile Include="Entities\FoodRepository.cs" />
     <Compile Include="Entities\Meal.cs" />
     <Compile Include="Entities\Password.cs" />
     <Compile Include="Entities\User.cs" />
