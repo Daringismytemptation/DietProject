@@ -21,27 +21,7 @@ namespace DietProject
         public FrmGirisYap()
         {
             InitializeComponent();
-            //silinecek 
-            CaloriesDBContext context = new CaloriesDBContext();
-            User user = new User
-            {
-                FirstName = "ege",
-                LastName = "sumer",
-                CreationDate = DateTime.Now,
-                IsActive = true,
-                Email = "admin",
-                UserType = EnumUser.Admin
-            };
-
-            user.Passwords.Add(new Password()
-            {
-                CreationDate = DateTime.Now,
-                UserPassword = "qwerty"
-            });
-
-            context.Users.Add(user);
-            context.SaveChanges();
-            //
+            
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)
