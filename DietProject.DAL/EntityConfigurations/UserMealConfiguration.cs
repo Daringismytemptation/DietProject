@@ -15,8 +15,8 @@ namespace DietProject.DAL.EntityConfigurations
         {
             //
             Property(a => a.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            HasOptional(a => a.Meal).WithMany(b => b.UserMeals);
-            HasOptional(a => a.User).WithMany(b => b.UserMeals);
+            HasRequired(a => a.Meal).WithMany(b => b.UserMeals).HasForeignKey(b => b.MealID);
+            HasRequired(a => a.User).WithMany(b => b.UserMeals).HasForeignKey(b => b.UserID);
         }
     }
 }

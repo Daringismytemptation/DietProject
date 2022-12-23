@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="CaloriesDBContext.cs" />
     <Compile Include="EntityConfigurations\CategoryConfiguration.cs" />
+    <Compile Include="EntityConfigurations\DateConfiguration.cs" />
     <Compile Include="EntityConfigurations\ExtraCalorieConfiguration.cs" />
     <Compile Include="EntityConfigurations\FoodConfiguration.cs" />
     <Compile Include="EntityConfigurations\FoodDetailConfiguration.cs" />
