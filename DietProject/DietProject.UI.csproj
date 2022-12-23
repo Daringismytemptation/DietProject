@@ -149,6 +149,10 @@
       <Project>{995F735A-233F-4494-8754-86359B352DF5}</Project>
       <Name>DietProject.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DietProject.DAL\DietProject.DAL.csproj">
+      <Project>{D2C732D8-28E9-4C24-937A-B45003AF9EA1}</Project>
+      <Name>DietProject.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DietProject.Model\DietProject.Model.csproj">
       <Project>{36898F64-587E-43AF-96CA-D136FDFE203F}</Project>
       <Name>DietProject.Model</Name>

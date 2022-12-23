@@ -59,6 +59,7 @@
     <Compile Include="Entities\Meal.cs" />
     <Compile Include="Entities\Password.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserMeal.cs" />
     <Compile Include="Enum\GenderEnum.cs" />
     <Compile Include="Enum\EnumUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

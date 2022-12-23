@@ -23,29 +23,28 @@ namespace DietProject
 
         private void btnKayitOl_Click(object sender, EventArgs e)
         {
-            try
-            {
-                User user = new User();
-                user.Email = txtID.Text;
-                //        user.Passwords = 
-                user.FirstName = txtUserAd.Text;
-                user.LastName = txtUserSoyad.Text;
-                user.Weight = int.Parse(txtKilo.Text);
-                user.Age = int.Parse(txtYas.Text);
+            //try
+            //{
+            //    User user = new User();
+            //    user.Email = txtID.Text;
+            //    //        user.Passwords = 
+            //    user.FirstName = txtUserAd.Text;
+            //    user.LastName = txtUserSoyad.Text;
+            //    user.Weight = int.Parse(txtKilo.Text);
+            //    user.Age = int.Parse(txtYas.Text);
 
-                //  user.Passwords.Add(new Password()
-                //  {
-                                        // pw kısmını yarın hallederiz
-                //  }
+            //    //  user.Passwords.Add(new Password()
+            //    //  {
+            //                            // pw kısmını yarın hallederiz
+            //    //  }
 
-                bool check = userService.Insert(user);
-                MessageBox.Show(check ? "Kullanıcı eklendi" : "Kullanıcı eklenmedi");
-            }
-            catch (Exception ex)
-            {
+               
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Message);
-            }
+            //    MessageBox.Show(ex.Message);
+            //}
          
         }
     }

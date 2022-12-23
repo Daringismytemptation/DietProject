@@ -54,7 +54,7 @@
             this.lvAdmin.TabIndex = 0;
             this.lvAdmin.UseCompatibleStateImageBehavior = false;
             this.lvAdmin.View = System.Windows.Forms.View.Details;
-            this.lvAdmin.DoubleClick += new System.EventHandler(this.lvAdmin_DoubleClick);
+      
             // 
             // columnHeader1
             // 

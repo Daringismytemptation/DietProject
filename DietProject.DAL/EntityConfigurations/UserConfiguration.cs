@@ -29,7 +29,7 @@ namespace DietProject.DAL.EntityConfigurations
             HasMany(a => a.FoodDetails).WithRequired(a => a.User).HasForeignKey(c => c.UserID);
 
             // Meal many to many
-            HasMany(a => a.Meals).WithMany(b => b.Users);
+            //HasMany(a => a.Meals).WithMany(b => b.Users);
 
 
 

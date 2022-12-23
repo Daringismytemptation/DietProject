@@ -10,7 +10,7 @@ namespace DietProject.Model.Entities
     {
         public Meal()
         {
-            Users = new HashSet<User>();
+            UserMeals = new HashSet<UserMeal>();
             Foods = new HashSet<Food>();
         }
 
@@ -20,7 +20,7 @@ namespace DietProject.Model.Entities
 
         // Navigations
 
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<UserMeal> UserMeals { get; set; }
 
         public virtual ICollection<Food> Foods { get; set; }
 
