@@ -32,6 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.dgvKullanici = new System.Windows.Forms.DataGridView();
+            this.btnPorsiyon = new System.Windows.Forms.Button();
+            this.btnAdi = new System.Windows.Forms.Button();
+            this.btnKategori = new System.Windows.Forms.Button();
+            this.btnOgun = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
@@ -46,23 +52,19 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvOneriler = new System.Windows.Forms.DataGridView();
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
-            this.btnOgun = new System.Windows.Forms.Button();
-            this.btnKategori = new System.Windows.Forms.Button();
-            this.btnAdi = new System.Windows.Forms.Button();
-            this.btnPorsiyon = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
-            this.dgvKullanici = new System.Windows.Forms.DataGridView();
-            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnGoruntule = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnGoruntule);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpTarih);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -117,6 +119,65 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Programım";
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.ForeColor = System.Drawing.Color.Red;
+            this.btnKaydet.Location = new System.Drawing.Point(796, 570);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(96, 47);
+            this.btnKaydet.TabIndex = 14;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            // 
+            // dgvKullanici
+            // 
+            this.dgvKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKullanici.Location = new System.Drawing.Point(300, 41);
+            this.dgvKullanici.Name = "dgvKullanici";
+            this.dgvKullanici.Size = new System.Drawing.Size(592, 338);
+            this.dgvKullanici.TabIndex = 13;
+            // 
+            // btnPorsiyon
+            // 
+            this.btnPorsiyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPorsiyon.Location = new System.Drawing.Point(236, 218);
+            this.btnPorsiyon.Name = "btnPorsiyon";
+            this.btnPorsiyon.Size = new System.Drawing.Size(27, 20);
+            this.btnPorsiyon.TabIndex = 12;
+            this.btnPorsiyon.Text = "...\r\n";
+            this.btnPorsiyon.UseVisualStyleBackColor = true;
+            // 
+            // btnAdi
+            // 
+            this.btnAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAdi.Location = new System.Drawing.Point(236, 188);
+            this.btnAdi.Name = "btnAdi";
+            this.btnAdi.Size = new System.Drawing.Size(27, 20);
+            this.btnAdi.TabIndex = 11;
+            this.btnAdi.Text = "...\r\n";
+            this.btnAdi.UseVisualStyleBackColor = true;
+            // 
+            // btnKategori
+            // 
+            this.btnKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKategori.Location = new System.Drawing.Point(236, 158);
+            this.btnKategori.Name = "btnKategori";
+            this.btnKategori.Size = new System.Drawing.Size(27, 20);
+            this.btnKategori.TabIndex = 10;
+            this.btnKategori.Text = "...\r\n";
+            this.btnKategori.UseVisualStyleBackColor = true;
+            // 
+            // btnOgun
+            // 
+            this.btnOgun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOgun.Location = new System.Drawing.Point(236, 128);
+            this.btnOgun.Name = "btnOgun";
+            this.btnOgun.Size = new System.Drawing.Size(27, 20);
+            this.btnOgun.TabIndex = 4;
+            this.btnOgun.Text = "...\r\n";
+            this.btnOgun.UseVisualStyleBackColor = true;
             // 
             // btnSil
             // 
@@ -260,46 +321,6 @@
             this.btnMenudeOlmayanOneriler.Text = "Menüde Olmayan Öneriler";
             this.btnMenudeOlmayanOneriler.UseVisualStyleBackColor = true;
             // 
-            // btnOgun
-            // 
-            this.btnOgun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOgun.Location = new System.Drawing.Point(236, 128);
-            this.btnOgun.Name = "btnOgun";
-            this.btnOgun.Size = new System.Drawing.Size(27, 20);
-            this.btnOgun.TabIndex = 4;
-            this.btnOgun.Text = "...\r\n";
-            this.btnOgun.UseVisualStyleBackColor = true;
-            // 
-            // btnKategori
-            // 
-            this.btnKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKategori.Location = new System.Drawing.Point(236, 158);
-            this.btnKategori.Name = "btnKategori";
-            this.btnKategori.Size = new System.Drawing.Size(27, 20);
-            this.btnKategori.TabIndex = 10;
-            this.btnKategori.Text = "...\r\n";
-            this.btnKategori.UseVisualStyleBackColor = true;
-            // 
-            // btnAdi
-            // 
-            this.btnAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdi.Location = new System.Drawing.Point(236, 188);
-            this.btnAdi.Name = "btnAdi";
-            this.btnAdi.Size = new System.Drawing.Size(27, 20);
-            this.btnAdi.TabIndex = 11;
-            this.btnAdi.Text = "...\r\n";
-            this.btnAdi.UseVisualStyleBackColor = true;
-            // 
-            // btnPorsiyon
-            // 
-            this.btnPorsiyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPorsiyon.Location = new System.Drawing.Point(236, 218);
-            this.btnPorsiyon.Name = "btnPorsiyon";
-            this.btnPorsiyon.Size = new System.Drawing.Size(27, 20);
-            this.btnPorsiyon.TabIndex = 12;
-            this.btnPorsiyon.Text = "...\r\n";
-            this.btnPorsiyon.UseVisualStyleBackColor = true;
-            // 
             // btnHaftalikRapor
             // 
             this.btnHaftalikRapor.BackColor = System.Drawing.Color.Transparent;
@@ -323,24 +344,17 @@
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = true;
             // 
-            // dgvKullanici
+            // btnGoruntule
             // 
-            this.dgvKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKullanici.Location = new System.Drawing.Point(300, 41);
-            this.dgvKullanici.Name = "dgvKullanici";
-            this.dgvKullanici.Size = new System.Drawing.Size(592, 338);
-            this.dgvKullanici.TabIndex = 13;
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.Red;
-            this.btnKaydet.Location = new System.Drawing.Point(796, 570);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(96, 47);
-            this.btnKaydet.TabIndex = 14;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnGoruntule.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGoruntule.ForeColor = System.Drawing.Color.Blue;
+            this.btnGoruntule.Location = new System.Drawing.Point(166, 103);
+            this.btnGoruntule.Name = "btnGoruntule";
+            this.btnGoruntule.Size = new System.Drawing.Size(74, 29);
+            this.btnGoruntule.TabIndex = 15;
+            this.btnGoruntule.Text = "Görüntüle";
+            this.btnGoruntule.UseVisualStyleBackColor = true;
+            this.btnGoruntule.Click += new System.EventHandler(this.btnGoruntule_Click);
             // 
             // FrmInterface
             // 
@@ -359,9 +373,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,5 +408,6 @@
         private System.Windows.Forms.Button btnAylikRapor;
         private System.Windows.Forms.DataGridView dgvKullanici;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnGoruntule;
     }
 }
