@@ -1,4 +1,5 @@
 ﻿using DietProject.DAL.EntityConfigurations;
+using DietProject.DAL.Strategy;
 using DietProject.Model.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace DietProject.DAL
     {
         public CaloriesDBContext() : base("Data Source=.;Initial Catalog=CeliacDietProject;Integrated Security=true;")
         {
-
+            Database.SetInitializer(new CaloriesStrategy());
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Password> Passwords { get; set; }
