@@ -21,7 +21,7 @@ namespace DietProject
         public FrmGirisYap()
         {
             InitializeComponent();
-            
+
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace DietProject
                             this.Show();
                             break;
                         case EnumUser.Standart:
-                            FrmKarsilamaEkrani frmKarsilama = new       FrmKarsilamaEkrani(kullaniciAdi);
+                            FrmKarsilamaEkrani frmKarsilama = new FrmKarsilamaEkrani(user,kullaniciAdi);
                             this.Hide();
                             frmKarsilama.ShowDialog();
                             this.Show();

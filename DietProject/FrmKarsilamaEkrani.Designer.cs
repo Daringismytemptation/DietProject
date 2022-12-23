@@ -58,6 +58,7 @@
             this.lblKullanici.Size = new System.Drawing.Size(63, 15);
             this.lblKullanici.TabIndex = 1;
             this.lblKullanici.Text = "Kullanıcı";
+         
             // 
             // label3
             // 

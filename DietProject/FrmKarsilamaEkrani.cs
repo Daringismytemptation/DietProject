@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DietProject.Model.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,16 +17,18 @@ namespace DietProject
         {
             InitializeComponent();
         }
+        User GelenUser;
         string gelenKullanici;
-        public FrmKarsilamaEkrani(string kullaniciAdi)
+        public FrmKarsilamaEkrani(User user,string kullaniciAdi)
         {
             InitializeComponent();
             gelenKullanici= kullaniciAdi;
+            GelenUser= user;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmInterface arayuz = new FrmInterface();
+            FrmInterface arayuz = new FrmInterface(GelenUser);
             this.Hide();
             arayuz.ShowDialog();
         }
@@ -34,5 +37,7 @@ namespace DietProject
         {
             lblKullanici.Text = gelenKullanici;
         }
+
+       
     }
 }
