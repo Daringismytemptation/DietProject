@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGoruntule = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -54,7 +55,6 @@
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
-            this.btnGoruntule = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
@@ -74,6 +74,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tarih";
+            // 
+            // btnGoruntule
+            // 
+            this.btnGoruntule.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGoruntule.ForeColor = System.Drawing.Color.Blue;
+            this.btnGoruntule.Location = new System.Drawing.Point(166, 103);
+            this.btnGoruntule.Name = "btnGoruntule";
+            this.btnGoruntule.Size = new System.Drawing.Size(74, 29);
+            this.btnGoruntule.TabIndex = 15;
+            this.btnGoruntule.Text = "Görüntüle";
+            this.btnGoruntule.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -200,6 +211,7 @@
             this.btnEkle.TabIndex = 8;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnGuncelle
             // 
@@ -344,18 +356,6 @@
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = true;
             // 
-            // btnGoruntule
-            // 
-            this.btnGoruntule.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGoruntule.ForeColor = System.Drawing.Color.Blue;
-            this.btnGoruntule.Location = new System.Drawing.Point(166, 103);
-            this.btnGoruntule.Name = "btnGoruntule";
-            this.btnGoruntule.Size = new System.Drawing.Size(74, 29);
-            this.btnGoruntule.TabIndex = 15;
-            this.btnGoruntule.Text = "Görüntüle";
-            this.btnGoruntule.UseVisualStyleBackColor = true;
-            this.btnGoruntule.Click += new System.EventHandler(this.btnGoruntule_Click);
-            // 
             // FrmInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +369,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmInterface";
             this.Text = "Interface";
+            this.Load += new System.EventHandler(this.FrmInterface_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

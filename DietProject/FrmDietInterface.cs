@@ -31,27 +31,28 @@ namespace DietProject
             this.gelenUser = gelenUser;
         }
 
- 
-        private void btnGoruntule_Click(object sender, EventArgs e)
+        private void btnEkle_Click(object sender, EventArgs e)
         {
-            Date date = new Date();
-            date.RelevantDate = dtpTarih.Value;
-           var a = db.Users.Where(x => x.ID == gelenUser.ID).FirstOrDefault();
-            a.Dates.Add(date);
-            db.SaveChanges();
-            MessageBox.Show("işlem gerçekleştirildi");
-            // İlk önce gidecek databaseden ege kullanıcısı ile ilgili tarihin(relevant) kesişim noktası olan kümeyi dataSource kısmına aktarıcak. devamında 
-
-            var b = db.Users.Where(x => x.ID == gelenUser.ID).ToList();
-            var c = b.Where(x => x.Dates.Equals(date.RelevantDate)).ToList();
-            dgvKullanici.DataSource = c;
-           
-            
-
-           // user = userService.CheckLogin(kullaniciAdi, sifre);
-
-
-
+          
         }
+
+        private void FrmInterface_Load(object sender, EventArgs e)
+        {
+            cmbOgunler.Items.Add(db.Meals.Select(x=>x.MealName).First());
+        }
+
+
+        //private void btnGoruntule_Click(object sender, EventArgs e)
+        //{
+
+        //    var a = db.Users.Where(x => x.ID == gelenUser.ID).FirstOrDefault();
+        //    var b = db.UserMeals.Where(x => x.UserID == gelenUser.ID).FirstOrDefault();
+
+        //    var c= db.Meals.Select(x=> new {x.ID,x.E})
+
+
+
+
+        //}
     }
 }
