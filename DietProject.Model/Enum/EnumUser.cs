@@ -9,6 +9,6 @@ namespace DietProject.Model.Enum
 	public enum EnumUser
 	{
 		Admin=1,
-		Users
+		Standart
 	}
 }

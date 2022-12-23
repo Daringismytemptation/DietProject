@@ -1,5 +1,6 @@
 ﻿using DietProject.BLL.Services;
 using DietProject.Model.Entities;
+using DietProject.Model.Enum;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,29 +24,39 @@ namespace DietProject
 
         private void btnKayitOl_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    User user = new User();
-            //    user.Email = txtID.Text;
-            //    //        user.Passwords = 
-            //    user.FirstName = txtUserAd.Text;
-            //    user.LastName = txtUserSoyad.Text;
-            //    user.Weight = int.Parse(txtKilo.Text);
-            //    user.Age = int.Parse(txtYas.Text);
+           
+            if (txtPassword.Text != txtPasswordRepeat.Text)
+            {
+                MessageBox.Show("Şifreler birbirini tutmuyor");
+                return;
+            }
+            try
+            {
+                User user = new User()
+                {
+                    FirstName = txtUserAd.Text,
+                    LastName = txtUserSoyad.Text,
+                    Email = txtID.Text,
+                    Gender = rbMale.Checked ? EnumGender.Male : EnumGender.Female,
+                    UserType = EnumUser.Standart,
+                    Age=(int)nudYas.Value,
+                    Weight= (int)nudKilo.Value,
 
-            //    //  user.Passwords.Add(new Password()
-            //    //  {
-            //                            // pw kısmını yarın hallederiz
-            //    //  }
+                };
+                user.Passwords.Add(new Password()
+                {
+                    UserPassword = txtPassword.Text
+                });
+                bool check = userService.Insert(user);
+                MessageBox.Show(check ? "Kullanıcı eklendi" : "Kullanıcı eklenemedi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-               
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show(ex.Message);
-            //}
-         
         }
+
+     
     }
 }

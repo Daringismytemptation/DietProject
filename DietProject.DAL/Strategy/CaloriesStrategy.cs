@@ -20,7 +20,7 @@ namespace DietProject.DAL.Strategy
                 CreationDate = DateTime.Now,
                 Email = "admin.admin@gmail.com",
                 Age = 18,
-                Gender = GenderEnum.Male,
+                Gender = EnumGender.Male,
                 UserType = EnumUser.Admin,
                 IsActive = true
 

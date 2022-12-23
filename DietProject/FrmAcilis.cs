@@ -44,5 +44,10 @@ namespace DietProject
             this.Show();
 
         }
+
+        private void CeliacFit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

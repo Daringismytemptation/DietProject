@@ -100,6 +100,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CeliacFit";
             this.Text = "CeliacFit";
+            this.Load += new System.EventHandler(this.CeliacFit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Enum
 {
-	public enum GenderEnum
+	public enum EnumGender
 	{
 		Male=1,
 		Female

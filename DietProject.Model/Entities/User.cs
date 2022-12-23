@@ -31,7 +31,7 @@ namespace DietProject.Model.Entities
         public EnumUser UserType { get; set; }
 
         public bool IsActive { get; set; }  // Admin tarafından onaylı mı?
-        public GenderEnum Gender { get; set; }
+        public EnumGender Gender { get; set; }
 
 
         // Navigations
