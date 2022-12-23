@@ -54,20 +54,21 @@
             this.lvAdmin.TabIndex = 0;
             this.lvAdmin.UseCompatibleStateImageBehavior = false;
             this.lvAdmin.View = System.Windows.Forms.View.Details;
+            this.lvAdmin.DoubleClick += new System.EventHandler(this.lvAdmin_DoubleClick);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Kullanıcı Adı";
+            this.columnHeader1.Text = "AD";
             this.columnHeader1.Width = 206;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Ad";
+            this.columnHeader2.Text = "Soyad";
             this.columnHeader2.Width = 172;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Soyad";
+            this.columnHeader3.Text = "Email";
             this.columnHeader3.Width = 214;
             // 
             // columnHeader4
