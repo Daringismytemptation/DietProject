@@ -43,5 +43,23 @@ namespace DietProject.BLL.Services
 
             return userRepository.CheckLogin(userName, password);
         }
+       public List<User> GetPassiveUsers()
+        {
+            return userRepository.GetPassiveUsers();
+        }
+
+        void CheckUserId(User user)
+        {
+            if (user.ID <= 0) throw new Exception("User id boş olamaz");
+        }
+
+        public void ActivateUser(int UserID)
+        {
+            User user = userRepository.GetUserById(UserID);
+            CheckUserId(user);
+            userRepository.ActivateUser(user);
+        }
+
+
     }
 }

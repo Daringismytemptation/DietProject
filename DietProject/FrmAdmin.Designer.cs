@@ -54,7 +54,7 @@
             this.lvAdmin.TabIndex = 0;
             this.lvAdmin.UseCompatibleStateImageBehavior = false;
             this.lvAdmin.View = System.Windows.Forms.View.Details;
-      
+            this.lvAdmin.DoubleClick += new System.EventHandler(this.lvAdmin_DoubleClick_1);
             // 
             // columnHeader1
             // 
@@ -84,6 +84,7 @@
             this.Controls.Add(this.lvAdmin);
             this.Name = "FrmAdmin";
             this.Text = "FrmAdmin";
+            this.Load += new System.EventHandler(this.FrmAdmin_Load_1);
             this.ResumeLayout(false);
 
         }

@@ -16,13 +16,23 @@ namespace DietProject
         {
             InitializeComponent();
         }
-
+        string gelenKullanici;
+        public FrmKarsilamaEkrani(string kullaniciAdi)
+        {
+            InitializeComponent();
+            gelenKullanici= kullaniciAdi;
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
             FrmInterface arayuz = new FrmInterface();
             this.Hide();
             arayuz.ShowDialog();
+        }
+
+        private void FrmKarsilamaEkrani_Load(object sender, EventArgs e)
+        {
+            lblKullanici.Text = gelenKullanici;
         }
     }
 }

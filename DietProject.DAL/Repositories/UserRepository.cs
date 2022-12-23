@@ -35,5 +35,20 @@ namespace DietProject.DAL.Repositories
             }
             return null;
         }
+        public List<User> GetPassiveUsers()
+        {
+            return context.Users.Where(a=> !a.IsActive).ToList();
+        }
+
+        public User GetUserById(int userID)
+        {
+            return context.Users.Find(userID);
+        }
+        public void ActivateUser(User user)
+        {
+            User activatedUser = GetUserById(user.ID);
+            activatedUser.IsActive = true;
+            context.SaveChanges();
+        }
     }
 }
