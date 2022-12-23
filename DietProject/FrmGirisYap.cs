@@ -69,7 +69,7 @@ namespace DietProject
                             this.Show();
                             break;
                         case EnumUser.Standart:
-                            FrmKarsilamaEkrani frmKarsilama = new FrmKarsilamaEkrani(kullaniciAdi);
+                            FrmKarsilamaEkrani frmKarsilama = new       FrmKarsilamaEkrani(kullaniciAdi);
                             this.Hide();
                             frmKarsilama.ShowDialog();
                             this.Show();
