@@ -38,7 +38,7 @@ namespace DietProject
 
         private void FrmInterface_Load(object sender, EventArgs e)
         {
-            cmbOgunler.Items.Add(db.Meals.Select(x=>x.MealName).First());
+            //cmbOgunler.Items.Add(db.Meals.Select(x=>x.MealName).First());
         }
 
 
