@@ -41,6 +41,7 @@ namespace DietProject
                     UserType = EnumUser.Standart,
                     Age=(int)nudYas.Value,
                     Weight= (int)nudKilo.Value,
+                    Height= (int)nudHeight.Value,
 
                 };
                 user.Passwords.Add(new Password()

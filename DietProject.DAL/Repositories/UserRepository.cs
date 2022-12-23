@@ -11,14 +11,29 @@ namespace DietProject.DAL.Repositories
     public class UserRepository
     {
         CaloriesDBContext context;
+        PasswordRepository passwordRepository;
         public UserRepository()
         {
            context= new CaloriesDBContext();
+           passwordRepository= new PasswordRepository();
         }
         public bool Insert(User user)
         {
             context.Users.Add(user);
             return context.SaveChanges() > 0;
+        }
+        public User CheckLogin(string userName, string password)
+        {
+            User user = context.Users.Where(a => a.FirstName == userName).SingleOrDefault();
+            if (user != null)
+            {
+                Password userPassword = passwordRepository.GetActivePassword(user.ID);
+                if (userPassword != null && userPassword.UserPassword == password)
+                {
+                    return user;
+                }
+            }
+            return null;
         }
     }
 }

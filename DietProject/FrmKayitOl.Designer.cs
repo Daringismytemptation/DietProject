@@ -48,11 +48,14 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.nudYas = new System.Windows.Forms.NumericUpDown();
             this.nudKilo = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.nudHeight = new System.Windows.Forms.NumericUpDown();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudYas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKilo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -139,12 +142,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudHeight);
             this.groupBox1.Controls.Add(this.nudKilo);
             this.groupBox1.Controls.Add(this.nudYas);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtUserAd);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtUserSoyad);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -266,6 +271,24 @@
             this.nudKilo.Size = new System.Drawing.Size(120, 20);
             this.nudKilo.TabIndex = 8;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.Olive;
+            this.label8.Location = new System.Drawing.Point(6, 143);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Boyunuz:";
+            // 
+            // nudHeight
+            // 
+            this.nudHeight.Location = new System.Drawing.Point(167, 143);
+            this.nudHeight.Name = "nudHeight";
+            this.nudHeight.Size = new System.Drawing.Size(120, 20);
+            this.nudHeight.TabIndex = 8;
+            // 
             // FrmKayitOl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +305,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudYas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKilo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,5 +332,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.NumericUpDown nudKilo;
         private System.Windows.Forms.NumericUpDown nudYas;
+        private System.Windows.Forms.NumericUpDown nudHeight;
+        private System.Windows.Forms.Label label8;
     }
 }

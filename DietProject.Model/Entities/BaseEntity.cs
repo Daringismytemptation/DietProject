@@ -9,7 +9,7 @@ namespace DietProject.Model.Entities
     public abstract class BaseEntity
     {
         public int ID { get; set; }
-        public DateTime CreationDate { get; set; }
+        public DateTime? CreationDate { get; set; }
         
     }
 }

@@ -29,11 +29,19 @@ namespace DietProject.BLL.Services
             }
 
 
-
+            user.CreationDate= DateTime.Now;
             user.Passwords.FirstOrDefault().CreationDate = DateTime.Now;
             user.IsActive = false;
             user.UserType = EnumUser.Standart;
             return userRepository.Insert(user);
+        }
+        public User CheckLogin(string userName, string password)
+        {
+            if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password)) throw new Exception("UserName ve/veya password eksik");
+
+
+
+            return userRepository.CheckLogin(userName, password);
         }
     }
 }

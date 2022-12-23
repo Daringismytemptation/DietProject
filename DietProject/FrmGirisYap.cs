@@ -46,50 +46,50 @@ namespace DietProject
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            //string kullaniciAdi = txtKullaniciAdi.Text;
-            //string sifre = txtSifre.Text;
-            
-            //try
-            //{
-            //    userService = new UserService();
-            //    User user = userService.CheckLogin(kullaniciAdi, sifre);
-            //    if (user != null)
-            //    {
-            //        if (!user.IsActive)
-            //        {
-            //            MessageBox.Show("Kullanıcı henüz Admin tarafından onaylanmamış");
-            //            return;
-            //        }
-            //        switch (user.UserType)
-            //        {
-            //            case EnumUser.Admin:
-            //                FrmAdmin adminForm = new FrmAdmin();
-            //                this.Hide();
-            //                adminForm.ShowDialog();
-            //                this.Show();
-            //                break;
-            //            case EnumUser.Users:
-            //                FrmKarsilamaEkrani frmKarsilama = new FrmKarsilamaEkrani();
-            //                this.Hide();
-            //                frmKarsilama.ShowDialog();
-            //                this.Show();
-            //                break;
+            string kullaniciAdi = txtKullaniciAdi.Text;
+            string sifre = txtSifre.Text;
 
-            //        }
+            try
+            {
+                userService = new UserService();
+                User user = userService.CheckLogin(kullaniciAdi, sifre);
+                if (user != null)
+                {
+                    if (!user.IsActive)
+                    {
+                        MessageBox.Show("Kullanıcı henüz Admin tarafından onaylanmamış");
+                        return;
+                    }
+                    switch (user.UserType)
+                    {
+                        case EnumUser.Admin:
+                            FrmAdmin adminForm = new FrmAdmin();
+                            this.Hide();
+                            adminForm.ShowDialog();
+                            this.Show();
+                            break;
+                        case EnumUser.Standart:
+                            FrmKarsilamaEkrani frmKarsilama = new FrmKarsilamaEkrani();
+                            this.Hide();
+                            frmKarsilama.ShowDialog();
+                            this.Show();
+                            break;
 
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Lütfen bilgilerinizi doğru giriniz");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
+                    }
 
-            //   MessageBox.Show(ex.Message);
-            //}
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen bilgilerinizi doğru giriniz");
+                }
+            }
+            catch (Exception ex)
+            {
 
-            
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
     }
 }
