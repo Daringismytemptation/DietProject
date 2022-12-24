@@ -10,20 +10,21 @@ namespace DietProject.Model.Entities
     {
         public Food()
         {
-            FoodDetails = new HashSet<FoodDetail>();
+           
             Meals = new HashSet<Meal>();
         }
 
         public string Name { get; set; }
         public byte[] Image { get; set; }
 
+        public decimal CalorieAmountPer100gr { get; set; }
 
         // Navigations
 
         public int? CategoryID { get; set; }
         public virtual Category Category { get; set; }
 
-        public virtual ICollection<FoodDetail> FoodDetails { get; set; }
+        
 
         public virtual ICollection<Meal> Meals { get; set; }
 

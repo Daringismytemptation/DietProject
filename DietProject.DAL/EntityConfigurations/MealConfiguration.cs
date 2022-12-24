@@ -15,8 +15,7 @@ namespace DietProject.DAL.EntityConfigurations
             //Foods many to many
             HasMany(a => a.Foods).WithMany(a => a.Meals);
 
-            //Extra one to many
-            HasMany(a => a.ExtraCalories).WithOptional(a => a.Meal).HasForeignKey(a => a.MealID);
+            
         }
     }
 }

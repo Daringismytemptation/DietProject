@@ -55,6 +55,8 @@
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtbCalorie = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
@@ -106,6 +108,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtbCalorie);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.btnKaydet);
             this.groupBox2.Controls.Add(this.dgvKullanici);
             this.groupBox2.Controls.Add(this.btnPorsiyon);
@@ -241,11 +245,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label4.Location = new System.Drawing.Point(175, 190);
+            this.label4.Location = new System.Drawing.Point(160, 192);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Adı";
+            this.label4.Text = "Yemek Adı";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -356,6 +360,25 @@
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.OliveDrab;
+            this.label6.Location = new System.Drawing.Point(139, 268);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Extra Alınan Kalori Miktarı";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtbCalorie
+            // 
+            this.txtbCalorie.Location = new System.Drawing.Point(33, 265);
+            this.txtbCalorie.Name = "txtbCalorie";
+            this.txtbCalorie.Size = new System.Drawing.Size(100, 20);
+            this.txtbCalorie.TabIndex = 17;
+            // 
             // FrmInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,5 +433,7 @@
         private System.Windows.Forms.DataGridView dgvKullanici;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnGoruntule;
+        private System.Windows.Forms.TextBox txtbCalorie;
+        private System.Windows.Forms.Label label6;
     }
 }
