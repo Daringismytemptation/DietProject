@@ -12,7 +12,7 @@ namespace DietProject.DAL
 {
     public class CaloriesDBContext:DbContext
     {
-        public CaloriesDBContext() : base("Data Source=.;Initial Catalog=CeliacDietProject12;Integrated Security=true;")
+        public CaloriesDBContext() : base("Data Source=.;Initial Catalog=CeliacDietProject13;Integrated Security=true;")
         {
             Database.SetInitializer(new CaloriesStrategy());
         }

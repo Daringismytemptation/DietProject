@@ -108,7 +108,9 @@ namespace DietProject
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+           var a= dgvKullanici.SelectedCells[0];
 
+          
         }
     }
 }
