@@ -53,21 +53,17 @@ namespace DietProject
             choise.UserID = gelenUser.ID;
             choiseService.Insert(choise);
 
-            var tarihfiltresi = db.Choises.Where(x => x.RelevantDate == p);
-            var userfiltresidahil = tarihfiltresi.Where(x => x.User.ID == gelenUser.ID);
-            var sonuc = userfiltresidahil.Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
-            dgvKullanici.DataSource = sonuc.ToList();
-
-
-
-
+            dgvKullanici.DataSource = db.Choises.Where(a => a.RelevantDate == p && a.User.ID==gelenUser.ID).Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
+            //var tarihfiltresi = db.Choises.Where(x => x.RelevantDate == p);
+            //var userfiltresidahil = tarihfiltresi.Where(x => x.User.ID == gelenUser.ID);
+            //var sonuc = userfiltresidahil.Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
+            //dgvKullanici.DataSource = sonuc.ToList();
 
         }
-
+       
         private void FrmInterface_Load(object sender, EventArgs e)
         {
             CbFillWithSpecialties();
-
         }
 
         /// <summary>
@@ -92,18 +88,12 @@ namespace DietProject
             cmbFoodName.SelectedIndex = -1;
             cmbFoodName.Items.Clear();
             
-
             string categoryName = cmbKategoriler.SelectedItem.ToString();
             var foods = foodService.foods(categoryName);
             foreach (var item in foods)
             {
                 cmbFoodName.Items.Add(item.Name);
             }
-
-
-
         }
-      
-        
     }
 }

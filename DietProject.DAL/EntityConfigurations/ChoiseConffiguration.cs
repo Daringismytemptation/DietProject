@@ -15,7 +15,7 @@ namespace DietProject.DAL.EntityConfigurations
             //
             HasRequired(a=>a.User).WithMany(b=>b.Choises).HasForeignKey(a=>a.UserID);
 
-
+            Property(a => a.RelevantDate).HasColumnType("date");
             
         }
     }

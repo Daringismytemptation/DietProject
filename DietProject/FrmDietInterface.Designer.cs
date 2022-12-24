@@ -109,6 +109,7 @@
             this.dtpTarih.Name = "dtpTarih";
             this.dtpTarih.Size = new System.Drawing.Size(211, 20);
             this.dtpTarih.TabIndex = 0;
+            this.dtpTarih.Value = new System.DateTime(2022, 12, 24, 0, 0, 0, 0);
             // 
             // groupBox2
             // 
@@ -453,11 +454,11 @@
         private System.Windows.Forms.Button btnOgun;
         private System.Windows.Forms.Button btnHaftalikRapor;
         private System.Windows.Forms.Button btnAylikRapor;
-        private System.Windows.Forms.DataGridView dgvKullanici;
         private System.Windows.Forms.Button btnGoruntule;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.TextBox txtExtraCalorie;
         private System.Windows.Forms.TextBox txtFoodGram;
+        private System.Windows.Forms.DataGridView dgvKullanici;
     }
 }
