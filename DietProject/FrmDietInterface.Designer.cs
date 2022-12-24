@@ -48,7 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbAdi = new System.Windows.Forms.ComboBox();
+            this.cmbFoodName = new System.Windows.Forms.ComboBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             this.cmbOgunler = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -124,7 +124,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cmbAdi);
+            this.groupBox2.Controls.Add(this.cmbFoodName);
             this.groupBox2.Controls.Add(this.cmbKategoriler);
             this.groupBox2.Controls.Add(this.cmbOgunler);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -295,13 +295,13 @@
             this.label2.Text = "Öğün";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cmbAdi
+            // cmbFoodName
             // 
-            this.cmbAdi.FormattingEnabled = true;
-            this.cmbAdi.Location = new System.Drawing.Point(33, 190);
-            this.cmbAdi.Name = "cmbAdi";
-            this.cmbAdi.Size = new System.Drawing.Size(121, 21);
-            this.cmbAdi.TabIndex = 2;
+            this.cmbFoodName.FormattingEnabled = true;
+            this.cmbFoodName.Location = new System.Drawing.Point(33, 190);
+            this.cmbFoodName.Name = "cmbFoodName";
+            this.cmbFoodName.Size = new System.Drawing.Size(121, 21);
+            this.cmbFoodName.TabIndex = 2;
             // 
             // cmbKategoriler
             // 
@@ -310,6 +310,7 @@
             this.cmbKategoriler.Name = "cmbKategoriler";
             this.cmbKategoriler.Size = new System.Drawing.Size(121, 21);
             this.cmbKategoriler.TabIndex = 1;
+            this.cmbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cmbKategoriler_SelectedIndexChanged);
             // 
             // cmbOgunler
             // 
@@ -416,7 +417,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbAdi;
+        private System.Windows.Forms.ComboBox cmbFoodName;
         private System.Windows.Forms.ComboBox cmbKategoriler;
         private System.Windows.Forms.ComboBox cmbOgunler;
         private System.Windows.Forms.Button btnSil;

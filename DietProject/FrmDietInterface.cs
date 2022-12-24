@@ -62,8 +62,20 @@ namespace DietProject
                 cmbKategoriler.Items.Add(item.Name);
             }
         }
-       
 
-        
+        private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbFoodName.Items.Clear();
+            cmbFoodName.SelectedIndex = -1;
+           var a= cmbKategoriler.SelectedItem.ToString();
+           var b= db.Categories.Where(x => x.Name == a).ToList();
+            foreach (var item in b)
+            {
+                foreach (var items in item.Foods)
+                {
+                    cmbFoodName.Items.Add(items.Name);
+                }
+            }
+        }
     }
 }
