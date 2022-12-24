@@ -118,7 +118,22 @@ namespace DietProject
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            
 
+        }
+
+        private void dgvKullanici_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var a = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
+            var choice = db.Choises.Where(x => x.ID == a).FirstOrDefault();
+
+            cmbFoodName.Text = choice.FoodName;
+            var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
+
+            cmbKategoriler.Text = choice.Category;
+            cmbOgunler.Text = choice.Meal;
+            txtExtraCalorie.Text = choice.ExtraCalori.ToString();
+            txtFoodGram.Text = ((choice.Portion * 100) / d).ToString();
         }
     }
 }
