@@ -39,13 +39,18 @@ namespace DietProject
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-           var d= db.Foods.Where(x => x.Name == cmbFoodName.ToString()).Select(a => a.CalorieAmountPer100gr).FirstOrDefault();
+           var d= db.Foods.Where(x => x.Name == cmbFoodName.SelectedItem.ToString()).Select(a => a.CalorieAmountPer100gr).FirstOrDefault();
             Choise choise=new Choise();
             choise.Meal=cmbOgunler.SelectedItem.ToString();
             choise.Category=cmbKategoriler.SelectedItem.ToString();
             choise.FoodName=cmbFoodName.SelectedItem.ToString();
-            choise.Portion = (decimal)(nudFoodGram.Value) / 100 * d;
-            choise.ExtraCalori=nudExtraKalori.Value;
+            choise.Portion = Convert.ToDecimal(txtFoodGram.Text) / 100 * d;
+            choise.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
+            choise.RelevantDate = dtpTarih.Value;
+            choise.UserID = gelenUser.ID;
+            db.Choises.Add(choise);
+            db.SaveChanges();
+            dgvKullanici.DataSource = db.Choises.ToList();
         }
 
         private void FrmInterface_Load(object sender, EventArgs e)

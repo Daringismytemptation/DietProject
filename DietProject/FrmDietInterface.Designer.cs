@@ -35,7 +35,6 @@
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnKaydet = new System.Windows.Forms.Button();
-            this.nudExtraKalori = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvKullanici = new System.Windows.Forms.DataGridView();
             this.btnPorsiyon = new System.Windows.Forms.Button();
@@ -57,14 +56,13 @@
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
-            this.nudFoodGram = new System.Windows.Forms.NumericUpDown();
+            this.txtFoodGram = new System.Windows.Forms.TextBox();
+            this.txtExtraCalorie = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudExtraKalori)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFoodGram)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -115,9 +113,9 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox2.Controls.Add(this.txtExtraCalorie);
+            this.groupBox2.Controls.Add(this.txtFoodGram);
             this.groupBox2.Controls.Add(this.btnKaydet);
-            this.groupBox2.Controls.Add(this.nudFoodGram);
-            this.groupBox2.Controls.Add(this.nudExtraKalori);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.dgvKullanici);
             this.groupBox2.Controls.Add(this.btnPorsiyon);
@@ -154,13 +152,6 @@
             this.btnKaydet.TabIndex = 20;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
-            // 
-            // nudExtraKalori
-            // 
-            this.nudExtraKalori.Location = new System.Drawing.Point(23, 264);
-            this.nudExtraKalori.Name = "nudExtraKalori";
-            this.nudExtraKalori.Size = new System.Drawing.Size(121, 20);
-            this.nudExtraKalori.TabIndex = 18;
             // 
             // label6
             // 
@@ -386,12 +377,19 @@
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = false;
             // 
-            // nudFoodGram
+            // txtFoodGram
             // 
-            this.nudFoodGram.Location = new System.Drawing.Point(23, 220);
-            this.nudFoodGram.Name = "nudFoodGram";
-            this.nudFoodGram.Size = new System.Drawing.Size(121, 20);
-            this.nudFoodGram.TabIndex = 18;
+            this.txtFoodGram.Location = new System.Drawing.Point(42, 222);
+            this.txtFoodGram.Name = "txtFoodGram";
+            this.txtFoodGram.Size = new System.Drawing.Size(100, 20);
+            this.txtFoodGram.TabIndex = 21;
+            // 
+            // txtExtraCalorie
+            // 
+            this.txtExtraCalorie.Location = new System.Drawing.Point(42, 265);
+            this.txtExtraCalorie.Name = "txtExtraCalorie";
+            this.txtExtraCalorie.Size = new System.Drawing.Size(100, 20);
+            this.txtExtraCalorie.TabIndex = 21;
             // 
             // FrmInterface
             // 
@@ -415,11 +413,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudExtraKalori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFoodGram)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,8 +448,8 @@
         private System.Windows.Forms.DataGridView dgvKullanici;
         private System.Windows.Forms.Button btnGoruntule;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown nudExtraKalori;
         private System.Windows.Forms.Button btnKaydet;
-        private System.Windows.Forms.NumericUpDown nudFoodGram;
+        private System.Windows.Forms.TextBox txtExtraCalorie;
+        private System.Windows.Forms.TextBox txtFoodGram;
     }
 }
