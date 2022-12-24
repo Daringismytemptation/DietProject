@@ -91,6 +91,7 @@
             this.btnGoruntule.TabIndex = 15;
             this.btnGoruntule.Text = "Görüntüle";
             this.btnGoruntule.UseVisualStyleBackColor = true;
+            this.btnGoruntule.Click += new System.EventHandler(this.btnGoruntule_Click);
             // 
             // label1
             // 
@@ -163,7 +164,7 @@
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.Black;
-            this.btnKaydet.Location = new System.Drawing.Point(803, 575);
+            this.btnKaydet.Location = new System.Drawing.Point(803, 577);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(89, 42);
             this.btnKaydet.TabIndex = 20;

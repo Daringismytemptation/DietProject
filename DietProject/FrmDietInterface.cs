@@ -41,7 +41,7 @@ namespace DietProject
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            var p = dtpTarih.Value;
+            
             var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
             Choise choise=new Choise();
             choise.Meal=cmbOgunler.SelectedItem.ToString();
@@ -52,15 +52,20 @@ namespace DietProject
             choise.RelevantDate = dtpTarih.Value;
             choise.UserID = gelenUser.ID;
             choiseService.Insert(choise);
+            ListTheDataSource();
 
-            dgvKullanici.DataSource = db.Choises.Where(a => a.RelevantDate == p && a.User.ID==gelenUser.ID).Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
             //var tarihfiltresi = db.Choises.Where(x => x.RelevantDate == p);
             //var userfiltresidahil = tarihfiltresi.Where(x => x.User.ID == gelenUser.ID);
             //var sonuc = userfiltresidahil.Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
             //dgvKullanici.DataSource = sonuc.ToList();
 
         }
-       
+       void ListTheDataSource()
+        {
+            var p = dtpTarih.Value;
+            dgvKullanici.DataSource = db.Choises.Where(a => a.RelevantDate == p && a.User.ID == gelenUser.ID).Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
+        }
+
         private void FrmInterface_Load(object sender, EventArgs e)
         {
             CbFillWithSpecialties();
@@ -94,6 +99,11 @@ namespace DietProject
             {
                 cmbFoodName.Items.Add(item.Name);
             }
+        }
+
+        private void btnGoruntule_Click(object sender, EventArgs e)
+        {
+            ListTheDataSource();
         }
     }
 }
