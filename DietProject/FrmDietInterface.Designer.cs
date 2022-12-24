@@ -366,6 +366,7 @@
             this.btnHaftalikRapor.TabIndex = 4;
             this.btnHaftalikRapor.Text = "Haftalık Rapor\r\n";
             this.btnHaftalikRapor.UseVisualStyleBackColor = false;
+            this.btnHaftalikRapor.Click += new System.EventHandler(this.btnHaftalikRapor_Click);
             // 
             // btnAylikRapor
             // 
