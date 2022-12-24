@@ -41,7 +41,7 @@ namespace DietProject
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            
+            var p = dtpTarih.Value;
             var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
             Choise choise=new Choise();
             choise.Meal=cmbOgunler.SelectedItem.ToString();
@@ -53,9 +53,15 @@ namespace DietProject
             choise.UserID = gelenUser.ID;
             choiseService.Insert(choise);
 
-            ShowFilteredByDayWithAdding();
-            
-            
+            var tarihfiltresi = db.Choises.Where(x => x.RelevantDate == p);
+            var userfiltresidahil = tarihfiltresi.Where(x => x.User.ID == gelenUser.ID);
+            var sonuc = userfiltresidahil.Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
+            dgvKullanici.DataSource = sonuc.ToList();
+
+
+
+
+
         }
 
         private void FrmInterface_Load(object sender, EventArgs e)
@@ -97,16 +103,7 @@ namespace DietProject
 
 
         }
-        /// <summary>
-        /// Gün Bazlı Eklenen Öğünün Filtrasyonunu önceki ilgili tarihte ekelenen datalarıyla birlikte  Datasource Gridview ile Gösterme
-        /// </summary>
-        public void ShowFilteredByDayWithAdding()
-        {
-            var p = dtpTarih.Value;
-            var tarihfiltresi = db.Choises.Where(x => x.RelevantDate == p);
-            var userfiltresidahil = tarihfiltresi.Where(x => x.User.ID == gelenUser.ID);
-            var sonuc = userfiltresidahil.Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
-            dgvKullanici.DataSource = sonuc;
-        }
+      
+        
     }
 }
