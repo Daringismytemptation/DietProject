@@ -200,5 +200,19 @@ namespace DietProject
 
             dgvKullanici.DataSource = date;
         }
+
+        private void btnFoodCollection_Click(object sender, EventArgs e)
+        {
+            var date = db.Choises.GroupBy(a => new { a.Meal, a.FoodName }).Select(group => new
+            {
+                Meal = group.Key.Meal,
+                FoodName = group.Key.FoodName,
+                YenmeAdedi = group.Count(),
+
+
+
+            }).OrderByDescending(x=>x.YenmeAdedi).ToList();
+            dgvKullanici.DataSource = date;
+        }
     }
 }

@@ -57,7 +57,7 @@
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
             this.btnDailyReport = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFoodCollection = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
@@ -397,19 +397,19 @@
             this.btnDailyReport.UseVisualStyleBackColor = false;
             this.btnDailyReport.Click += new System.EventHandler(this.btnDailyReport_Click);
             // 
-            // button1
+            // btnFoodCollection
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.Location = new System.Drawing.Point(158, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 63);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Yemek Ceşidi Raporu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnAylikRapor_Click);
+            this.btnFoodCollection.BackColor = System.Drawing.Color.Transparent;
+            this.btnFoodCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoodCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFoodCollection.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnFoodCollection.Location = new System.Drawing.Point(158, 505);
+            this.btnFoodCollection.Name = "btnFoodCollection";
+            this.btnFoodCollection.Size = new System.Drawing.Size(104, 63);
+            this.btnFoodCollection.TabIndex = 5;
+            this.btnFoodCollection.Text = "Yemek Ceşidi Raporu";
+            this.btnFoodCollection.UseVisualStyleBackColor = false;
+            this.btnFoodCollection.Click += new System.EventHandler(this.btnFoodCollection_Click);
             // 
             // FrmInterface
             // 
@@ -418,7 +418,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1287, 681);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFoodCollection);
             this.Controls.Add(this.btnAylikRapor);
             this.Controls.Add(this.btnDailyReport);
             this.Controls.Add(this.btnHaftalikRapor);
@@ -473,6 +473,6 @@
         private System.Windows.Forms.TextBox txtFoodGram;
         private System.Windows.Forms.DataGridView dgvKullanici;
         private System.Windows.Forms.Button btnDailyReport;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFoodCollection;
     }
 }
