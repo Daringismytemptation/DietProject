@@ -188,6 +188,7 @@
             this.dgvKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKullanici.Location = new System.Drawing.Point(300, 41);
             this.dgvKullanici.Name = "dgvKullanici";
+            this.dgvKullanici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKullanici.Size = new System.Drawing.Size(592, 338);
             this.dgvKullanici.TabIndex = 13;
             // 

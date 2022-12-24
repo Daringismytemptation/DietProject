@@ -108,9 +108,12 @@ namespace DietProject
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-           var a= dgvKullanici.SelectedCells[0];
-
-          
+           var a= dgvKullanici.SelectedCells[0].Value.ToString();
+            var b = Convert.ToInt32(a);
+            var c = db.Choises.Where(x => x.ID == b).FirstOrDefault();
+            db.Choises.Remove(c);
+            db.SaveChanges();
+            btnGoruntule.PerformClick();
         }
     }
 }
