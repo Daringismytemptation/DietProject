@@ -20,5 +20,6 @@ namespace DietProject.DAL.Repositories
         {
             return context.Categories.ToList();
         }
+        
     }
 }

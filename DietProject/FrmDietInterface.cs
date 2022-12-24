@@ -16,6 +16,7 @@ namespace DietProject
 {
     public partial class FrmInterface : Form
     {
+        FoodService foodService;
         CategoryService categoryService;
         MealService mealService;
         UserService userService;
@@ -33,6 +34,7 @@ namespace DietProject
             this.gelenUser = gelenUser;
             mealService = new MealService();
             categoryService = new CategoryService();
+            foodService = new FoodService();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -65,17 +67,19 @@ namespace DietProject
 
         private void cmbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbFoodName.Items.Clear();
             cmbFoodName.SelectedIndex = -1;
-           var a= cmbKategoriler.SelectedItem.ToString();
-           var b= db.Categories.Where(x => x.Name == a).ToList();
-            foreach (var item in b)
+            cmbFoodName.Items.Clear();
+            
+
+            string categoryName = cmbKategoriler.SelectedItem.ToString();
+            var foods = foodService.foods(categoryName);
+            foreach (var item in foods)
             {
-                foreach (var items in item.Foods)
-                {
-                    cmbFoodName.Items.Add(items.Name);
-                }
+                cmbFoodName.Items.Add(item.Name);
             }
+
+           
+
         }
     }
 }

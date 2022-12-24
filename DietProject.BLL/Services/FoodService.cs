@@ -10,6 +10,14 @@ namespace DietProject.BLL.Services
 {
     public class FoodService
     {
-       
+        FoodRepository foodRepository;
+        public FoodService()
+        {
+            foodRepository= new FoodRepository();
+        }
+        public List<Food> foods(string categoryName)
+        {
+            return foodRepository.foods(categoryName);
+        }
     }
 }

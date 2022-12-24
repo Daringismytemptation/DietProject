@@ -10,14 +10,17 @@ namespace DietProject.BLL.Services
 {
     public class CategoryService
     {
+        FoodRepository foodRepository;
         CategoryRepository categoryRepository;
         public CategoryService()
         {
             categoryRepository= new CategoryRepository();
+            foodRepository= new FoodRepository();
         }
         public List<Category> Categories()
         {
             return categoryRepository.Categories();
         }
+       
     }
 }
