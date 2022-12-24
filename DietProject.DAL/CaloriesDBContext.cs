@@ -12,7 +12,7 @@ namespace DietProject.DAL
 {
     public class CaloriesDBContext:DbContext
     {
-        public CaloriesDBContext() : base("Data Source=.;Initial Catalog=CeliacDietProject3;Integrated Security=true;")
+        public CaloriesDBContext() : base("Data Source=.;Initial Catalog=CeliacDietProject6;Integrated Security=true;")
         {
             Database.SetInitializer(new CaloriesStrategy());
         }
@@ -25,6 +25,7 @@ namespace DietProject.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Date> Dates { get; set; }
         public DbSet<UserMeal> UserMeals { get; set; }
+        public DbSet<Choise> Choises { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 
@@ -37,6 +38,7 @@ namespace DietProject.DAL
             modelBuilder.Configurations.Add(new CategoryConfiguration());
             modelBuilder.Configurations.Add(new UserMealConfiguration());
             modelBuilder.Configurations.Add(new DateConfiguration());
+            modelBuilder.Configurations.Add(new ChoiseConffiguration());
 
 
         }

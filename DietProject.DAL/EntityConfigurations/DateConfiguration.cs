@@ -12,7 +12,12 @@ namespace DietProject.DAL.EntityConfigurations
     {
         public DateConfiguration()
         {
-            HasMany(a => a.Users).WithMany(a => a.Dates);
+           
+            HasMany(b => b.Choises).WithRequired(b => b.Date).HasForeignKey(a => a.DateID);
+           //bir userın birden çok datesi olabilir ama bir date 1 usera aittir 
+           HasRequired(b=>b.User).WithMany(b=>b.Dates).HasForeignKey(a => a.UserID);
+           
+            
         }
     }
 }

@@ -17,6 +17,7 @@ namespace DietProject.Model.Entities
             UserMeals = new HashSet<UserMeal>();
             FoodDetails = new HashSet<FoodDetail>();
             Dates = new HashSet<Date>();
+            Choises= new HashSet<Choise>();
             
         }
 
@@ -44,6 +45,8 @@ namespace DietProject.Model.Entities
         public virtual ICollection<FoodDetail> FoodDetails { get; set; }
 
         public virtual ICollection<Date> Dates { get; set; }
+
+        public virtual ICollection<Choise> Choises { get; set; }
 
     }
 }

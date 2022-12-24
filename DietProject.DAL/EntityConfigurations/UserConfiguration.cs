@@ -32,7 +32,11 @@ namespace DietProject.DAL.EntityConfigurations
             //HasMany(a => a.Meals).WithMany(b => b.Users);
 
 
+            //Choise one to many
+            HasMany(a=>a.Choises).WithRequired(b=>b.User).HasForeignKey(c => c.UserID);
 
+            //Dates one to many
+            HasMany(a => a.Dates).WithRequired(b => b.User).HasForeignKey(c => c.User.ID);
         }
     }
 }

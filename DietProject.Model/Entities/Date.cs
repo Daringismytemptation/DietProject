@@ -10,11 +10,17 @@ namespace DietProject.Model.Entities
     {
         public Date()
         {
-            Users = new HashSet<User>();
+            
+            Choises = new HashSet<Choise>();
         }
         public DateTime RelevantDate { get; set; }
+
+
         //Navigations
 
-        public virtual ICollection<User> Users { get; set; }
+        public int UserID { get; set; }
+        public virtual User User { get; set; }
+
+        public virtual ICollection<Choise> Choises { get; set; }
     }
 }
