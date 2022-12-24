@@ -115,5 +115,10 @@ namespace DietProject
             //db.SaveChanges();
             btnGoruntule.PerformClick();
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
