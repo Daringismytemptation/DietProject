@@ -124,11 +124,18 @@ namespace DietProject
 
         private void dgvKullanici_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void dgvKullanici_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             var a = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
             var choice = db.Choises.Where(x => x.ID == a).FirstOrDefault();
 
+
+
             cmbFoodName.Text = choice.FoodName;
-            var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
+            var d = choiseService.GetCalorie(cmbFoodName.Text);
 
             cmbKategoriler.Text = choice.Category;
             cmbOgunler.Text = choice.Meal;

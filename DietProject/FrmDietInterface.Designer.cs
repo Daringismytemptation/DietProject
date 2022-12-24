@@ -191,6 +191,7 @@
             this.dgvKullanici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKullanici.Size = new System.Drawing.Size(592, 338);
             this.dgvKullanici.TabIndex = 13;
+            this.dgvKullanici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellClick);
             this.dgvKullanici.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellValueChanged);
             // 
             // btnPorsiyon
