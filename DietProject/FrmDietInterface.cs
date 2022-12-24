@@ -42,19 +42,25 @@ namespace DietProject
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            
-            var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
-            Choise choise=new Choise();
-            choise.Meal=cmbOgunler.SelectedItem.ToString();
-            choise.Category=cmbKategoriler.SelectedItem.ToString();
-            choise.FoodName=cmbFoodName.SelectedItem.ToString();
-            choise.Portion = Convert.ToDecimal(txtFoodGram.Text) / 100 * d;
-            choise.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
-            choise.RelevantDate = dtpTarih.Value;
-            choise.UserID = gelenUser.ID;
-            choiseService.Insert(choise);
-            ListTheDataSource();
-
+            try
+            {
+                var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
+                Choise choise = new Choise();
+                choise.Meal = cmbOgunler.SelectedItem.ToString();
+                choise.Category = cmbKategoriler.SelectedItem.ToString();
+                choise.FoodName = cmbFoodName.SelectedItem.ToString();
+                choise.Portion = Convert.ToDecimal(txtFoodGram.Text) / 100 * d;
+                choise.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
+                choise.RelevantDate = dtpTarih.Value;
+                choise.UserID = gelenUser.ID;
+                choiseService.Insert(choise);
+                ListTheDataSource();
+                btnGuncelle.Enabled = btnSil.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Eksik bilgileriniz var");
+            }
             //var tarihfiltresi = db.Choises.Where(x => x.RelevantDate == p);
             //var userfiltresidahil = tarihfiltresi.Where(x => x.User.ID == gelenUser.ID);
             //var sonuc = userfiltresidahil.Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
@@ -70,6 +76,8 @@ namespace DietProject
         private void FrmInterface_Load(object sender, EventArgs e)
         {
             CbFillWithSpecialties();
+            btnGuncelle.Enabled = false;
+            btnSil.Enabled = false;
         }
 
         /// <summary>
@@ -105,6 +113,7 @@ namespace DietProject
         private void btnGoruntule_Click(object sender, EventArgs e)
         {
             ListTheDataSource();
+            dgvKullanici.ClearSelection();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -151,6 +160,8 @@ namespace DietProject
             cmbOgunler.Text = choice.Meal;
             txtExtraCalorie.Text = choice.ExtraCalori.ToString();
             txtFoodGram.Text = ((choice.Portion * 100) / d).ToString();
+            btnGuncelle.Enabled = true;
+            btnSil.Enabled = true;
         }
 
         private void btnDailyReport_Click(object sender, EventArgs e)
