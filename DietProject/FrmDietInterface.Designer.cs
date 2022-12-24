@@ -58,11 +58,13 @@
             this.btnAylikRapor = new System.Windows.Forms.Button();
             this.btnDailyReport = new System.Windows.Forms.Button();
             this.btnFoodCollection = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -116,6 +118,11 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox2.Controls.Add(this.btnHaftalikRapor);
+            this.groupBox2.Controls.Add(this.btnAylikRapor);
+            this.groupBox2.Controls.Add(this.btnFoodCollection);
+            this.groupBox2.Controls.Add(this.btnDailyReport);
+            this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.txtExtraCalorie);
             this.groupBox2.Controls.Add(this.txtFoodGram);
             this.groupBox2.Controls.Add(this.label6);
@@ -145,14 +152,14 @@
             // 
             // txtExtraCalorie
             // 
-            this.txtExtraCalorie.Location = new System.Drawing.Point(23, 259);
+            this.txtExtraCalorie.Location = new System.Drawing.Point(55, 174);
             this.txtExtraCalorie.Name = "txtExtraCalorie";
             this.txtExtraCalorie.Size = new System.Drawing.Size(119, 20);
             this.txtExtraCalorie.TabIndex = 21;
             // 
             // txtFoodGram
             // 
-            this.txtFoodGram.Location = new System.Drawing.Point(23, 222);
+            this.txtFoodGram.Location = new System.Drawing.Point(55, 137);
             this.txtFoodGram.Name = "txtFoodGram";
             this.txtFoodGram.Size = new System.Drawing.Size(119, 20);
             this.txtFoodGram.TabIndex = 21;
@@ -162,7 +169,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.label6.Location = new System.Drawing.Point(153, 255);
+            this.label6.Location = new System.Drawing.Point(185, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 26);
             this.label6.TabIndex = 16;
@@ -172,10 +179,10 @@
             // dgvKullanici
             // 
             this.dgvKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKullanici.Location = new System.Drawing.Point(300, 41);
+            this.dgvKullanici.Location = new System.Drawing.Point(340, 19);
             this.dgvKullanici.Name = "dgvKullanici";
             this.dgvKullanici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKullanici.Size = new System.Drawing.Size(592, 338);
+            this.dgvKullanici.Size = new System.Drawing.Size(592, 300);
             this.dgvKullanici.TabIndex = 13;
             this.dgvKullanici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellClick);
             this.dgvKullanici.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellValueChanged);
@@ -183,7 +190,7 @@
             // btnAdi
             // 
             this.btnAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdi.Location = new System.Drawing.Point(255, 186);
+            this.btnAdi.Location = new System.Drawing.Point(287, 101);
             this.btnAdi.Name = "btnAdi";
             this.btnAdi.Size = new System.Drawing.Size(27, 20);
             this.btnAdi.TabIndex = 11;
@@ -193,7 +200,7 @@
             // btnKategori
             // 
             this.btnKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKategori.Location = new System.Drawing.Point(255, 157);
+            this.btnKategori.Location = new System.Drawing.Point(287, 72);
             this.btnKategori.Name = "btnKategori";
             this.btnKategori.Size = new System.Drawing.Size(27, 20);
             this.btnKategori.TabIndex = 10;
@@ -203,7 +210,7 @@
             // btnOgun
             // 
             this.btnOgun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOgun.Location = new System.Drawing.Point(255, 128);
+            this.btnOgun.Location = new System.Drawing.Point(287, 43);
             this.btnOgun.Name = "btnOgun";
             this.btnOgun.Size = new System.Drawing.Size(27, 20);
             this.btnOgun.TabIndex = 4;
@@ -215,7 +222,7 @@
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.ForeColor = System.Drawing.Color.Black;
-            this.btnSil.Location = new System.Drawing.Point(23, 570);
+            this.btnSil.Location = new System.Drawing.Point(238, 239);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(96, 47);
             this.btnSil.TabIndex = 9;
@@ -228,7 +235,7 @@
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(23, 501);
+            this.btnEkle.Location = new System.Drawing.Point(126, 239);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(96, 47);
             this.btnEkle.TabIndex = 8;
@@ -241,7 +248,7 @@
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(23, 437);
+            this.btnGuncelle.Location = new System.Drawing.Point(24, 239);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(96, 47);
             this.btnGuncelle.TabIndex = 3;
@@ -254,7 +261,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.label5.Location = new System.Drawing.Point(153, 222);
+            this.label5.Location = new System.Drawing.Point(185, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 6;
@@ -266,7 +273,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.label4.Location = new System.Drawing.Point(153, 190);
+            this.label4.Location = new System.Drawing.Point(185, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 5;
@@ -278,7 +285,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.label3.Location = new System.Drawing.Point(153, 160);
+            this.label3.Location = new System.Drawing.Point(185, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 4;
@@ -290,7 +297,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.label2.Location = new System.Drawing.Point(153, 128);
+            this.label2.Location = new System.Drawing.Point(185, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
@@ -300,7 +307,7 @@
             // cmbFoodName
             // 
             this.cmbFoodName.FormattingEnabled = true;
-            this.cmbFoodName.Location = new System.Drawing.Point(23, 190);
+            this.cmbFoodName.Location = new System.Drawing.Point(55, 105);
             this.cmbFoodName.Name = "cmbFoodName";
             this.cmbFoodName.Size = new System.Drawing.Size(121, 21);
             this.cmbFoodName.TabIndex = 2;
@@ -308,7 +315,7 @@
             // cmbKategoriler
             // 
             this.cmbKategoriler.FormattingEnabled = true;
-            this.cmbKategoriler.Location = new System.Drawing.Point(23, 157);
+            this.cmbKategoriler.Location = new System.Drawing.Point(55, 72);
             this.cmbKategoriler.Name = "cmbKategoriler";
             this.cmbKategoriler.Size = new System.Drawing.Size(121, 21);
             this.cmbKategoriler.TabIndex = 1;
@@ -317,7 +324,7 @@
             // cmbOgunler
             // 
             this.cmbOgunler.FormattingEnabled = true;
-            this.cmbOgunler.Location = new System.Drawing.Point(23, 125);
+            this.cmbOgunler.Location = new System.Drawing.Point(55, 40);
             this.cmbOgunler.Name = "cmbOgunler";
             this.cmbOgunler.Size = new System.Drawing.Size(121, 21);
             this.cmbOgunler.TabIndex = 0;
@@ -361,7 +368,7 @@
             this.btnHaftalikRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHaftalikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHaftalikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnHaftalikRapor.Location = new System.Drawing.Point(13, 589);
+            this.btnHaftalikRapor.Location = new System.Drawing.Point(55, 511);
             this.btnHaftalikRapor.Name = "btnHaftalikRapor";
             this.btnHaftalikRapor.Size = new System.Drawing.Size(104, 63);
             this.btnHaftalikRapor.TabIndex = 4;
@@ -375,7 +382,7 @@
             this.btnAylikRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAylikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAylikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnAylikRapor.Location = new System.Drawing.Point(158, 589);
+            this.btnAylikRapor.Location = new System.Drawing.Point(188, 511);
             this.btnAylikRapor.Name = "btnAylikRapor";
             this.btnAylikRapor.Size = new System.Drawing.Size(104, 63);
             this.btnAylikRapor.TabIndex = 5;
@@ -389,7 +396,7 @@
             this.btnDailyReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDailyReport.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnDailyReport.Location = new System.Drawing.Point(13, 505);
+            this.btnDailyReport.Location = new System.Drawing.Point(55, 420);
             this.btnDailyReport.Name = "btnDailyReport";
             this.btnDailyReport.Size = new System.Drawing.Size(104, 63);
             this.btnDailyReport.TabIndex = 4;
@@ -403,13 +410,21 @@
             this.btnFoodCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFoodCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFoodCollection.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnFoodCollection.Location = new System.Drawing.Point(158, 505);
+            this.btnFoodCollection.Location = new System.Drawing.Point(188, 420);
             this.btnFoodCollection.Name = "btnFoodCollection";
             this.btnFoodCollection.Size = new System.Drawing.Size(104, 63);
             this.btnFoodCollection.TabIndex = 5;
             this.btnFoodCollection.Text = "Yemek Ceşidi Raporu";
             this.btnFoodCollection.UseVisualStyleBackColor = false;
             this.btnFoodCollection.Click += new System.EventHandler(this.btnFoodCollection_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(340, 336);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(592, 298);
+            this.dataGridView1.TabIndex = 0;
             // 
             // FrmInterface
             // 
@@ -418,10 +433,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1287, 681);
-            this.Controls.Add(this.btnFoodCollection);
-            this.Controls.Add(this.btnAylikRapor);
-            this.Controls.Add(this.btnDailyReport);
-            this.Controls.Add(this.btnHaftalikRapor);
             this.Controls.Add(this.btnMenudeOlmayanOneriler);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -439,6 +450,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOneriler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,5 +486,6 @@
         private System.Windows.Forms.DataGridView dgvKullanici;
         private System.Windows.Forms.Button btnDailyReport;
         private System.Windows.Forms.Button btnFoodCollection;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
