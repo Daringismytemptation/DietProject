@@ -183,5 +183,22 @@ namespace DietProject
             dgvKullanici.DataSource = date;
 
         }
+
+        private void btnAylikRapor_Click(object sender, EventArgs e)
+        {
+
+            var b = dtpTarih.Value.AddDays(-30);
+            var date = db.Choises.Where(a => a.RelevantDate >= b && a.RelevantDate <= dtpTarih.Value).GroupBy(a => new { a.Meal, a.Category }).Select(group => new
+            {
+                Category = group.Key.Category,
+                Meal = group.Key.Meal,
+                ToplamKalori = group.Sum(item => item.ExtraCalori + item.Portion)
+
+
+
+            }).ToList();
+
+            dgvKullanici.DataSource = date;
+        }
     }
 }
