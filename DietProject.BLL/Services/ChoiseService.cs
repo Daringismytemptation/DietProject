@@ -25,10 +25,7 @@ namespace DietProject.BLL.Services
         {
             return choiseRepository.Insert(choise);
         }
-        public IQueryable<Choise> Choises(DateTime dateTime)
-        {
-            return choiseRepository.Choises(dateTime);
-        }
+       
 
     }
 }
