@@ -167,14 +167,7 @@ namespace DietProject
         private void btnHaftalikRapor_Click(object sender, EventArgs e)
         {
 
-            //var b = dtpTarih.Value.AddDays(-7);
-            //var c = db.Choises.Where(x => x.RelevantDate >= b && x.RelevantDate <= dtpTarih.Value);
-            //var d= c.GroupBy(a => a.Meal).Select(group => new
-            //{
-            //    Öğün = group.Key,
-            //    Kategori=group.GroupBy(a => a.Category).Select(a=> new {Kategori=a.Key}),
-            //    ToplamKalori = group.Sum(item => item.ExtraCalori + item.Portion)
-            //}).ToList();
+            
 
             var b = dtpTarih.Value.AddDays(-7);
             var date = db.Choises.Where(a => a.RelevantDate >= b && a.RelevantDate <= dtpTarih.Value).GroupBy(a => new { a.Meal, a.Category }).Select(group => new
