@@ -155,16 +155,13 @@ namespace DietProject
 
         private void btnDailyReport_Click(object sender, EventArgs e)
         {
-            //var a = db.Choises.Where(x => x.ID == gelenUser.ID);
-            var p = dtpTarih.Value;
-            var b = db.Choises.Where(a => a.RelevantDate == p && a.User.ID == gelenUser.ID);
-            var c = b.GroupBy(a => a.Meal);
-            var d=c.Select(group => new
+           
+
+            dgvKullanici.DataSource = db.Choises.Where(a => a.User.ID == gelenUser.ID && a.RelevantDate == dtpTarih.Value).GroupBy(a => a.Meal).Select(group => new
             {
                 Öğün = group.Key,
                 ToplamKalori = group.Sum(item => item.ExtraCalori + item.Portion)
-            });
-            dgvKullanici.DataSource = d.ToList();
+            }).ToList();
         }
     }
 }
