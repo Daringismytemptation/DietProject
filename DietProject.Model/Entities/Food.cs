@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class Food:BaseEntity
+    public class Food:BaseMeal
     {
         public Food()
         {

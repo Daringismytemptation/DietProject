@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\BaseMeal.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Choise.cs" />
     <Compile Include="Entities\ExtraCalorie.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class FoodDetail:BaseEntity
+    public class FoodDetail:BaseMeal
     {
         public FoodDetail()
         {
@@ -22,8 +22,7 @@ namespace DietProject.Model.Entities
 
         public virtual ICollection<Food> Foods { get; set; }
 
-        public  int? UserID { get; set; }
-        public virtual User User { get; set; }
+    
 
 
 

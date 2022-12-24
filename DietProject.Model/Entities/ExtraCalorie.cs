@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class ExtraCalorie:BaseEntity
+    public class ExtraCalorie:BaseMeal
     {
         public ExtraCalorie()
         {
-            Meals = new HashSet<Meal>();
+            
         }
 
         public decimal Calorie { get; set; }
@@ -18,7 +18,9 @@ namespace DietProject.Model.Entities
 
         // Navigation
 
-        public virtual ICollection<Meal> Meals { get; set; }
+
+        public int? MealID { get; set; }
+        public virtual Meal Meal { get; set; }
 
        
     }

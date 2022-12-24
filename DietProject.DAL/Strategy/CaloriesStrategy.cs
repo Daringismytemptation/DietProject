@@ -30,10 +30,6 @@ namespace DietProject.DAL.Strategy
                 UserPassword = "admin",
                 CreationDate = DateTime.Now
             });
-            user.FoodDetails.Add(new FoodDetail()
-            {
-                CreationDate = DateTime.Now
-            });
 
             context.Users.Add(user);
             context.SaveChanges();

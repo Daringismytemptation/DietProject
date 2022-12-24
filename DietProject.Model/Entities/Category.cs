@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class Category:BaseEntity
+    public class Category:BaseMeal
     {
         public Category()
         {

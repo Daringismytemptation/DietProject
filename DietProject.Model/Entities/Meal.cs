@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace DietProject.Model.Entities
 {
-    public class Meal : BaseEntity
+    public class Meal : BaseMeal
     {
         public Meal()
         {
             
             Foods = new HashSet<Food>();
+            ExtraCalories=new HashSet<ExtraCalorie>();
         }
 
 
@@ -24,8 +25,8 @@ namespace DietProject.Model.Entities
 
         public virtual ICollection<Food> Foods { get; set; }
 
-        public int? ExtraCalorieID { get; set; }
-        public virtual ExtraCalorie ExtraCalorie { get; set; }
+        
+        public virtual ICollection<ExtraCalorie> ExtraCalories  { get; set; }
 
     
     }
