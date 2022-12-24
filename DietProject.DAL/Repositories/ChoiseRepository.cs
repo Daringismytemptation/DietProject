@@ -25,12 +25,7 @@ namespace DietProject.DAL.Repositories
             context.Choises.Add(choise);
             return context.SaveChanges() > 0;
         }
-        public IQueryable<Choise> Choises(DateTime dateTime,User user)
-        {
-            var a = context.Choises.Where(y => y.RelevantDate == dateTime && y.UserID == user.ID).Select(x => new { x.RelevantDate, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.Portion + x.ExtraCalori) }).ToList();
-            
-            return a;
-        }
+       
 
 
 
