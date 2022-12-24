@@ -35,8 +35,7 @@ namespace DietProject.DAL.EntityConfigurations
             //Choise one to many
             HasMany(a=>a.Choises).WithRequired(b=>b.User).HasForeignKey(c => c.UserID);
 
-            //Dates one to many
-            HasMany(a => a.Dates).WithRequired(b => b.User).HasForeignKey(c => c.User.ID);
+            
         }
     }
 }

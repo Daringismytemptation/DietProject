@@ -14,7 +14,8 @@ namespace DietProject.DAL.EntityConfigurations
         {
             //
             HasRequired(a=>a.User).WithMany(b=>b.Choises).HasForeignKey(a=>a.UserID);
-            HasRequired(a => a.Date).WithMany(b => b.Choises).HasForeignKey(a => a.DateID);
+
+
             
         }
     }

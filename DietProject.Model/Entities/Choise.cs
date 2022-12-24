@@ -8,13 +8,13 @@ namespace DietProject.Model.Entities
 {
     public class Choise:BaseEntity
     {
+        public DateTime RelevantDate { get; set; }
 
         //navigations
 
         public int UserID { get; set; }
         public virtual User User { get; set; }
 
-        public int DateID { get; set; }
-        public virtual Date Date { get; set; }
+      
     }
 }

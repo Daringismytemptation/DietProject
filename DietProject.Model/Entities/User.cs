@@ -9,16 +9,15 @@ using System.Web;
 
 namespace DietProject.Model.Entities
 {
-    public class User:BaseEntity
+    public class User : BaseEntity
     {
         public User()
         {
             Passwords = new HashSet<Password>();
             UserMeals = new HashSet<UserMeal>();
             FoodDetails = new HashSet<FoodDetail>();
-            Dates = new HashSet<Date>();
-            Choises= new HashSet<Choise>();
-            
+            Choises = new HashSet<Choise>();
+
         }
 
         public string FirstName { get; set; }
@@ -43,8 +42,6 @@ namespace DietProject.Model.Entities
         public virtual ICollection<UserMeal> UserMeals { get; set; }
 
         public virtual ICollection<FoodDetail> FoodDetails { get; set; }
-
-        public virtual ICollection<Date> Dates { get; set; }
 
         public virtual ICollection<Choise> Choises { get; set; }
 
