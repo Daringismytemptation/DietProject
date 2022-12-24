@@ -157,7 +157,7 @@ namespace DietProject
         {
            
 
-            dgvKullanici.DataSource = db.Choises.Where(a => a.User.ID == gelenUser.ID && a.RelevantDate == dtpTarih.Value).GroupBy(a => a.Meal).Select(group => new
+            dgvReports.DataSource = db.Choises.Where(a => a.User.ID == gelenUser.ID && a.RelevantDate == dtpTarih.Value).GroupBy(a => a.Meal).Select(group => new
             {
                 Öğün = group.Key,
                 ToplamKalori = group.Sum(item => item.ExtraCalori + item.Portion)
@@ -180,7 +180,7 @@ namespace DietProject
 
             }).ToList();
 
-            dgvKullanici.DataSource = date;
+            dgvReports.DataSource = date;
 
         }
 
@@ -198,7 +198,7 @@ namespace DietProject
 
             }).ToList();
 
-            dgvKullanici.DataSource = date;
+            dgvReports.DataSource = date;
         }
 
         private void btnFoodCollection_Click(object sender, EventArgs e)
@@ -212,7 +212,12 @@ namespace DietProject
 
 
             }).OrderByDescending(x=>x.YenmeAdedi).ToList();
-            dgvKullanici.DataSource = date;
+            dgvReports.DataSource = date;
+        }
+
+        private void txtFoodGram_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }
