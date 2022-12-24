@@ -40,8 +40,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.ForeColor = System.Drawing.Color.YellowGreen;
             this.label1.Location = new System.Drawing.Point(523, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 15);
@@ -51,28 +52,31 @@
             // lblKullanici
             // 
             this.lblKullanici.AutoSize = true;
+            this.lblKullanici.BackColor = System.Drawing.Color.Transparent;
             this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullanici.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblKullanici.ForeColor = System.Drawing.Color.YellowGreen;
             this.lblKullanici.Location = new System.Drawing.Point(610, 29);
             this.lblKullanici.Name = "lblKullanici";
             this.lblKullanici.Size = new System.Drawing.Size(63, 15);
             this.lblKullanici.TabIndex = 1;
             this.lblKullanici.Text = "Kullanıcı";
-         
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(24, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(316, 104);
+            this.label3.Size = new System.Drawing.Size(316, 117);
             this.label3.TabIndex = 2;
             this.label3.Text = resources.GetString("label3.Text");
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label4.Location = new System.Drawing.Point(23, 29);
@@ -83,7 +87,8 @@
             // 
             // btnBaslat
             // 
-            this.btnBaslat.BackColor = System.Drawing.Color.White;
+            this.btnBaslat.BackColor = System.Drawing.Color.Transparent;
+            this.btnBaslat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBaslat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBaslat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnBaslat.Location = new System.Drawing.Point(27, 274);
@@ -97,6 +102,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(24, 241);
             this.label6.Name = "label6";
@@ -108,13 +114,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 342);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(798, 340);
             this.Controls.Add(this.btnBaslat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmKarsilamaEkrani";
             this.Text = "KarsilamaEkrani";
             this.Load += new System.EventHandler(this.FrmKarsilamaEkrani_Load);
