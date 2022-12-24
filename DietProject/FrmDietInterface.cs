@@ -119,7 +119,7 @@ namespace DietProject
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             var Id = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
-            Choise update = db.Choises.Find(Id);
+            Choise update = choiseService.GetByChoiseID(Id);
             update.FoodName = cmbFoodName.Text.ToString();
             update.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
 
@@ -128,7 +128,8 @@ namespace DietProject
 
             update.Category = cmbKategoriler.Text.ToString();
             update.Meal = cmbOgunler.Text.ToString();
-            db.SaveChanges();
+            choiseService.Update(update);
+
             btnGoruntule.PerformClick();
         }
 

@@ -36,6 +36,13 @@ namespace DietProject.BLL.Services
         {
             return choiseRepository.SelectChoice(ID);
         }
-
+        public Choise GetByChoiseID(int choiseID)
+        {
+            return choiseRepository.GetByChoiseID(choiseID);
+        }
+        public bool Update(Choise choise)
+        {
+            return choiseRepository.Update(choise);
+        }
     }
 }
