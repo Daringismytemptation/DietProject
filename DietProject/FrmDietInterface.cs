@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
@@ -150,6 +151,20 @@ namespace DietProject
             cmbOgunler.Text = choice.Meal;
             txtExtraCalorie.Text = choice.ExtraCalori.ToString();
             txtFoodGram.Text = ((choice.Portion * 100) / d).ToString();
+        }
+
+        private void btnDailyReport_Click(object sender, EventArgs e)
+        {
+            //var a = db.Choises.Where(x => x.ID == gelenUser.ID);
+            var p = dtpTarih.Value;
+            var b = db.Choises.Where(a => a.RelevantDate == p && a.User.ID == gelenUser.ID);
+            var c = b.GroupBy(a => a.Meal);
+            var d=c.Select(group => new
+            {
+                Öğün = group.Key,
+                ToplamKalori = group.Sum(item => item.ExtraCalori + item.Portion)
+            });
+            dgvKullanici.DataSource = d.ToList();
         }
     }
 }

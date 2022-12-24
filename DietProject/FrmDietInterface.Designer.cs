@@ -36,10 +36,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtExtraCalorie = new System.Windows.Forms.TextBox();
             this.txtFoodGram = new System.Windows.Forms.TextBox();
-            this.btnKaydet = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvKullanici = new System.Windows.Forms.DataGridView();
-            this.btnPorsiyon = new System.Windows.Forms.Button();
             this.btnAdi = new System.Windows.Forms.Button();
             this.btnKategori = new System.Windows.Forms.Button();
             this.btnOgun = new System.Windows.Forms.Button();
@@ -58,6 +56,7 @@
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
+            this.btnDailyReport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
@@ -118,10 +117,8 @@
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox2.Controls.Add(this.txtExtraCalorie);
             this.groupBox2.Controls.Add(this.txtFoodGram);
-            this.groupBox2.Controls.Add(this.btnKaydet);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.dgvKullanici);
-            this.groupBox2.Controls.Add(this.btnPorsiyon);
             this.groupBox2.Controls.Add(this.btnAdi);
             this.groupBox2.Controls.Add(this.btnKategori);
             this.groupBox2.Controls.Add(this.btnOgun);
@@ -159,18 +156,6 @@
             this.txtFoodGram.Size = new System.Drawing.Size(119, 20);
             this.txtFoodGram.TabIndex = 21;
             // 
-            // btnKaydet
-            // 
-            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.Black;
-            this.btnKaydet.Location = new System.Drawing.Point(803, 577);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(89, 42);
-            this.btnKaydet.TabIndex = 20;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -193,16 +178,6 @@
             this.dgvKullanici.TabIndex = 13;
             this.dgvKullanici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellClick);
             this.dgvKullanici.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellValueChanged);
-            // 
-            // btnPorsiyon
-            // 
-            this.btnPorsiyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPorsiyon.Location = new System.Drawing.Point(255, 218);
-            this.btnPorsiyon.Name = "btnPorsiyon";
-            this.btnPorsiyon.Size = new System.Drawing.Size(27, 20);
-            this.btnPorsiyon.TabIndex = 12;
-            this.btnPorsiyon.Text = "...\r\n";
-            this.btnPorsiyon.UseVisualStyleBackColor = true;
             // 
             // btnAdi
             // 
@@ -405,6 +380,20 @@
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = false;
             // 
+            // btnDailyReport
+            // 
+            this.btnDailyReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnDailyReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDailyReport.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnDailyReport.Location = new System.Drawing.Point(43, 505);
+            this.btnDailyReport.Name = "btnDailyReport";
+            this.btnDailyReport.Size = new System.Drawing.Size(104, 63);
+            this.btnDailyReport.TabIndex = 4;
+            this.btnDailyReport.Text = "Günlük Rapor";
+            this.btnDailyReport.UseVisualStyleBackColor = false;
+            this.btnDailyReport.Click += new System.EventHandler(this.btnDailyReport_Click);
+            // 
             // FrmInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,6 +402,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1287, 681);
             this.Controls.Add(this.btnAylikRapor);
+            this.Controls.Add(this.btnDailyReport);
             this.Controls.Add(this.btnHaftalikRapor);
             this.Controls.Add(this.btnMenudeOlmayanOneriler);
             this.Controls.Add(this.groupBox3);
@@ -454,7 +444,6 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnPorsiyon;
         private System.Windows.Forms.Button btnAdi;
         private System.Windows.Forms.Button btnKategori;
         private System.Windows.Forms.Button btnOgun;
@@ -462,9 +451,9 @@
         private System.Windows.Forms.Button btnAylikRapor;
         private System.Windows.Forms.Button btnGoruntule;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.TextBox txtExtraCalorie;
         private System.Windows.Forms.TextBox txtFoodGram;
         private System.Windows.Forms.DataGridView dgvKullanici;
+        private System.Windows.Forms.Button btnDailyReport;
     }
 }
