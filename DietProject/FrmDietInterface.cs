@@ -133,7 +133,6 @@ namespace DietProject
             var choice = db.Choises.Where(x => x.ID == a).FirstOrDefault();
 
 
-
             cmbFoodName.Text = choice.FoodName;
             var d = choiseService.GetCalorie(cmbFoodName.Text);
 
