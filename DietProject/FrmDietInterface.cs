@@ -105,5 +105,10 @@ namespace DietProject
         {
             ListTheDataSource();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
