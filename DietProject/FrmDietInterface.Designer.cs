@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtExtraCalorie = new System.Windows.Forms.TextBox();
+            this.txtFoodGram = new System.Windows.Forms.TextBox();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvKullanici = new System.Windows.Forms.DataGridView();
@@ -56,8 +58,6 @@
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
-            this.txtFoodGram = new System.Windows.Forms.TextBox();
-            this.txtExtraCalorie = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
@@ -72,6 +72,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpTarih);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Gold;
             this.groupBox1.Location = new System.Drawing.Point(8, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(254, 138);
@@ -83,7 +84,7 @@
             // 
             this.btnGoruntule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoruntule.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGoruntule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnGoruntule.ForeColor = System.Drawing.Color.White;
             this.btnGoruntule.Location = new System.Drawing.Point(166, 103);
             this.btnGoruntule.Name = "btnGoruntule";
             this.btnGoruntule.Size = new System.Drawing.Size(74, 29);
@@ -95,7 +96,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(15, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 13);
@@ -134,6 +135,7 @@
             this.groupBox2.Controls.Add(this.cmbOgunler);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Gold;
             this.groupBox2.Location = new System.Drawing.Point(294, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(948, 640);
@@ -141,11 +143,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Programım";
             // 
+            // txtExtraCalorie
+            // 
+            this.txtExtraCalorie.Location = new System.Drawing.Point(23, 259);
+            this.txtExtraCalorie.Name = "txtExtraCalorie";
+            this.txtExtraCalorie.Size = new System.Drawing.Size(119, 20);
+            this.txtExtraCalorie.TabIndex = 21;
+            // 
+            // txtFoodGram
+            // 
+            this.txtFoodGram.Location = new System.Drawing.Point(23, 222);
+            this.txtFoodGram.Name = "txtFoodGram";
+            this.txtFoodGram.Size = new System.Drawing.Size(119, 20);
+            this.txtFoodGram.TabIndex = 21;
+            // 
             // btnKaydet
             // 
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnKaydet.ForeColor = System.Drawing.Color.Black;
             this.btnKaydet.Location = new System.Drawing.Point(803, 575);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(89, 42);
@@ -157,8 +173,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label6.Location = new System.Drawing.Point(164, 259);
+            this.label6.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.label6.Location = new System.Drawing.Point(153, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 26);
             this.label6.TabIndex = 16;
@@ -176,7 +192,7 @@
             // btnPorsiyon
             // 
             this.btnPorsiyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPorsiyon.Location = new System.Drawing.Point(245, 218);
+            this.btnPorsiyon.Location = new System.Drawing.Point(255, 218);
             this.btnPorsiyon.Name = "btnPorsiyon";
             this.btnPorsiyon.Size = new System.Drawing.Size(27, 20);
             this.btnPorsiyon.TabIndex = 12;
@@ -186,7 +202,7 @@
             // btnAdi
             // 
             this.btnAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdi.Location = new System.Drawing.Point(245, 189);
+            this.btnAdi.Location = new System.Drawing.Point(255, 186);
             this.btnAdi.Name = "btnAdi";
             this.btnAdi.Size = new System.Drawing.Size(27, 20);
             this.btnAdi.TabIndex = 11;
@@ -196,7 +212,7 @@
             // btnKategori
             // 
             this.btnKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKategori.Location = new System.Drawing.Point(245, 157);
+            this.btnKategori.Location = new System.Drawing.Point(255, 157);
             this.btnKategori.Name = "btnKategori";
             this.btnKategori.Size = new System.Drawing.Size(27, 20);
             this.btnKategori.TabIndex = 10;
@@ -206,7 +222,7 @@
             // btnOgun
             // 
             this.btnOgun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOgun.Location = new System.Drawing.Point(245, 128);
+            this.btnOgun.Location = new System.Drawing.Point(255, 128);
             this.btnOgun.Name = "btnOgun";
             this.btnOgun.Size = new System.Drawing.Size(27, 20);
             this.btnOgun.TabIndex = 4;
@@ -215,8 +231,9 @@
             // 
             // btnSil
             // 
+            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.ForeColor = System.Drawing.Color.Red;
+            this.btnSil.ForeColor = System.Drawing.Color.Black;
             this.btnSil.Location = new System.Drawing.Point(23, 570);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(96, 47);
@@ -226,8 +243,9 @@
             // 
             // btnEkle
             // 
+            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.ForeColor = System.Drawing.Color.Blue;
+            this.btnEkle.ForeColor = System.Drawing.Color.White;
             this.btnEkle.Location = new System.Drawing.Point(23, 501);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(96, 47);
@@ -238,8 +256,9 @@
             // 
             // btnGuncelle
             // 
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.ForeColor = System.Drawing.Color.Blue;
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
             this.btnGuncelle.Location = new System.Drawing.Point(23, 437);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(96, 47);
@@ -251,8 +270,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label5.Location = new System.Drawing.Point(148, 222);
+            this.label5.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.label5.Location = new System.Drawing.Point(153, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 6;
@@ -263,8 +282,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label4.Location = new System.Drawing.Point(163, 190);
+            this.label4.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.label4.Location = new System.Drawing.Point(153, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 5;
@@ -275,8 +294,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label3.Location = new System.Drawing.Point(164, 160);
+            this.label3.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.label3.Location = new System.Drawing.Point(153, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 4;
@@ -287,8 +306,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label2.Location = new System.Drawing.Point(164, 128);
+            this.label2.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.label2.Location = new System.Drawing.Point(153, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
@@ -325,7 +344,7 @@
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.dgvOneriler);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox3.ForeColor = System.Drawing.Color.Gold;
             this.groupBox3.Location = new System.Drawing.Point(13, 173);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(249, 230);
@@ -343,13 +362,15 @@
             // 
             // btnMenudeOlmayanOneriler
             // 
+            this.btnMenudeOlmayanOneriler.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenudeOlmayanOneriler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenudeOlmayanOneriler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMenudeOlmayanOneriler.Location = new System.Drawing.Point(43, 432);
             this.btnMenudeOlmayanOneriler.Name = "btnMenudeOlmayanOneriler";
             this.btnMenudeOlmayanOneriler.Size = new System.Drawing.Size(179, 40);
             this.btnMenudeOlmayanOneriler.TabIndex = 3;
             this.btnMenudeOlmayanOneriler.Text = "Getir";
-            this.btnMenudeOlmayanOneriler.UseVisualStyleBackColor = true;
+            this.btnMenudeOlmayanOneriler.UseVisualStyleBackColor = false;
             // 
             // btnHaftalikRapor
             // 
@@ -376,20 +397,6 @@
             this.btnAylikRapor.TabIndex = 5;
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = false;
-            // 
-            // txtFoodGram
-            // 
-            this.txtFoodGram.Location = new System.Drawing.Point(42, 222);
-            this.txtFoodGram.Name = "txtFoodGram";
-            this.txtFoodGram.Size = new System.Drawing.Size(100, 20);
-            this.txtFoodGram.TabIndex = 21;
-            // 
-            // txtExtraCalorie
-            // 
-            this.txtExtraCalorie.Location = new System.Drawing.Point(42, 265);
-            this.txtExtraCalorie.Name = "txtExtraCalorie";
-            this.txtExtraCalorie.Size = new System.Drawing.Size(100, 20);
-            this.txtExtraCalorie.TabIndex = 21;
             // 
             // FrmInterface
             // 
