@@ -26,7 +26,15 @@ namespace DietProject.DAL.Repositories
             return context.SaveChanges() > 0;
         }
        
+        public bool Delete(int gelenId)
+        {
+            
+            var delete = context.Choises.Where(x=> x.ID == gelenId).FirstOrDefault();
 
+            context.Choises.Remove(delete); 
+            
+            return context.SaveChanges() > 0;
+        }
 
 
     }

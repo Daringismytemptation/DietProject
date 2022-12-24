@@ -26,6 +26,10 @@ namespace DietProject.BLL.Services
             return choiseRepository.Insert(choise);
         }
        
+        public bool Delete(int ID)
+        {
+        return choiseRepository.Delete(ID);
+        }
 
     }
 }
