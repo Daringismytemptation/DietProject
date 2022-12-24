@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace DietProject.BLL.Services
 {
@@ -29,6 +30,11 @@ namespace DietProject.BLL.Services
         public bool Delete(int ID)
         {
         return choiseRepository.Delete(ID);
+        }
+
+        public Choise SelectChoice(int ID)
+        {
+            return choiseRepository.SelectChoice(ID);
         }
 
     }

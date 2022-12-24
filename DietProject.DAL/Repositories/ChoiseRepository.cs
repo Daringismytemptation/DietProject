@@ -36,6 +36,11 @@ namespace DietProject.DAL.Repositories
             return context.SaveChanges() > 0;
         }
 
+        public Choise SelectChoice(int ID)
+        {
+            return context.Choises.Where(x => x.ID == ID).FirstOrDefault();
+            
+        }
 
     }
 }
