@@ -60,6 +60,7 @@
     <Compile Include="EntityConfigurations\UserConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\ChoiseRepository.cs" />
     <Compile Include="Repositories\FoodRepository.cs" />
     <Compile Include="Repositories\MealRepository.cs" />
     <Compile Include="Repositories\PasswordRepository.cs" />

@@ -16,6 +16,7 @@ namespace DietProject
 {
     public partial class FrmInterface : Form
     {
+        ChoiseService choiseService;
         FoodService foodService;
         CategoryService categoryService;
         MealService mealService;
@@ -35,11 +36,12 @@ namespace DietProject
             mealService = new MealService();
             categoryService = new CategoryService();
             foodService = new FoodService();
+            choiseService = new ChoiseService();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-           var d= db.Foods.Where(x => x.Name == cmbFoodName.SelectedItem.ToString()).Select(a => a.CalorieAmountPer100gr).FirstOrDefault();
+            var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
             Choise choise=new Choise();
             choise.Meal=cmbOgunler.SelectedItem.ToString();
             choise.Category=cmbKategoriler.SelectedItem.ToString();
@@ -48,9 +50,8 @@ namespace DietProject
             choise.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
             choise.RelevantDate = dtpTarih.Value;
             choise.UserID = gelenUser.ID;
-            db.Choises.Add(choise);
-            db.SaveChanges();
-            dgvKullanici.DataSource = db.Choises.ToList();
+            choiseService.Insert(choise);
+            dgvKullanici.DataSource = choiseService.Choises();
         }
 
         private void FrmInterface_Load(object sender, EventArgs e)
