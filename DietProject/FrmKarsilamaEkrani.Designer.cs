@@ -126,6 +126,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmKarsilamaEkrani";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KarsilamaEkrani";
             this.Load += new System.EventHandler(this.FrmKarsilamaEkrani_Load);
             this.ResumeLayout(false);

@@ -414,6 +414,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInterface";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interface";
             this.Load += new System.EventHandler(this.FrmInterface_Load);
             this.groupBox1.ResumeLayout(false);
