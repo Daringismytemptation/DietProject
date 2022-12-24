@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtbCalorie = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.dgvKullanici = new System.Windows.Forms.DataGridView();
             this.btnPorsiyon = new System.Windows.Forms.Button();
@@ -46,7 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbPorsiyon = new System.Windows.Forms.ComboBox();
             this.cmbAdi = new System.Windows.Forms.ComboBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             this.cmbOgunler = new System.Windows.Forms.ComboBox();
@@ -55,8 +56,7 @@
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtbCalorie = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).BeginInit();
@@ -108,6 +108,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.txtbCalorie);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.btnKaydet);
@@ -123,7 +124,6 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cmbPorsiyon);
             this.groupBox2.Controls.Add(this.cmbAdi);
             this.groupBox2.Controls.Add(this.cmbKategoriler);
             this.groupBox2.Controls.Add(this.cmbOgunler);
@@ -134,6 +134,25 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Programım";
+            // 
+            // txtbCalorie
+            // 
+            this.txtbCalorie.Location = new System.Drawing.Point(33, 265);
+            this.txtbCalorie.Name = "txtbCalorie";
+            this.txtbCalorie.Size = new System.Drawing.Size(100, 20);
+            this.txtbCalorie.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.OliveDrab;
+            this.label6.Location = new System.Drawing.Point(139, 268);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Extra Alınan Kalori Miktarı";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnKaydet
             // 
@@ -276,14 +295,6 @@
             this.label2.Text = "Öğün";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cmbPorsiyon
-            // 
-            this.cmbPorsiyon.FormattingEnabled = true;
-            this.cmbPorsiyon.Location = new System.Drawing.Point(33, 223);
-            this.cmbPorsiyon.Name = "cmbPorsiyon";
-            this.cmbPorsiyon.Size = new System.Drawing.Size(121, 21);
-            this.cmbPorsiyon.TabIndex = 3;
-            // 
             // cmbAdi
             // 
             this.cmbAdi.FormattingEnabled = true;
@@ -360,24 +371,12 @@
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // textBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label6.Location = new System.Drawing.Point(139, 268);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Extra Alınan Kalori Miktarı";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtbCalorie
-            // 
-            this.txtbCalorie.Location = new System.Drawing.Point(33, 265);
-            this.txtbCalorie.Name = "txtbCalorie";
-            this.txtbCalorie.Size = new System.Drawing.Size(100, 20);
-            this.txtbCalorie.TabIndex = 17;
+            this.textBox1.Location = new System.Drawing.Point(33, 221);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 17;
             // 
             // FrmInterface
             // 
@@ -417,7 +416,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbPorsiyon;
         private System.Windows.Forms.ComboBox cmbAdi;
         private System.Windows.Forms.ComboBox cmbKategoriler;
         private System.Windows.Forms.ComboBox cmbOgunler;
@@ -435,5 +433,6 @@
         private System.Windows.Forms.Button btnGoruntule;
         private System.Windows.Forms.TextBox txtbCalorie;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

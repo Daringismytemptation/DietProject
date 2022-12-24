@@ -10,6 +10,14 @@ namespace DietProject.BLL.Services
 {
     public class MealService
     {
-       
+        MealRepository mealRepository;
+        public MealService()
+        {
+            mealRepository= new MealRepository();
+        }
+        public List<Meal> Meals()
+        {
+            return mealRepository.Meals();
+        }
     }
 }

@@ -16,6 +16,8 @@ namespace DietProject
 {
     public partial class FrmInterface : Form
     {
+        CategoryService categoryService;
+        MealService mealService;
         UserService userService;
         CaloriesDBContext db;
         User gelenUser;
@@ -29,6 +31,8 @@ namespace DietProject
             db = new CaloriesDBContext();
             InitializeComponent();
             this.gelenUser = gelenUser;
+            mealService = new MealService();
+            categoryService = new CategoryService();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -38,21 +42,28 @@ namespace DietProject
 
         private void FrmInterface_Load(object sender, EventArgs e)
         {
-            //cmbOgunler.Items.Add(db.Meals.Select(x=>x.MealName).First());
+            CbFillWithSpecialties();
+
         }
 
+        /// <summary>
+        /// İlgili Kategori ve Öğün Kavramlarının Form Ekranlarında Dolması
+        /// </summary>
+        public void CbFillWithSpecialties()
+        {
+            var meals = mealService.Meals();
+            foreach (var item in meals)
+            {
+                cmbOgunler.Items.Add(item.MealName);
+            }
+            var categories = categoryService.Categories();
+            foreach (var item in categories)
+            {
+                cmbKategoriler.Items.Add(item.Name);
+            }
+        }
+       
 
-        //private void btnGoruntule_Click(object sender, EventArgs e)
-        //{
-
-        //    var a = db.Users.Where(x => x.ID == gelenUser.ID).FirstOrDefault();
-        //    var b = db.UserMeals.Where(x => x.UserID == gelenUser.ID).FirstOrDefault();
-
-        //    var c= db.Meals.Select(x=> new {x.ID,x.E})
-
-
-
-
-        //}
+        
     }
 }
