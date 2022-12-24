@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnKaydet = new System.Windows.Forms.Button();
             this.nudExtraKalori = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.btnMenudeOlmayanOneriler = new System.Windows.Forms.Button();
             this.btnHaftalikRapor = new System.Windows.Forms.Button();
             this.btnAylikRapor = new System.Windows.Forms.Button();
-            this.btnKaydet = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudExtraKalori)).BeginInit();
@@ -141,6 +141,18 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Programım";
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnKaydet.Location = new System.Drawing.Point(803, 575);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(89, 42);
+            this.btnKaydet.TabIndex = 20;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
             // 
             // nudExtraKalori
             // 
@@ -380,18 +392,6 @@
             this.btnAylikRapor.Text = "Aylık Rapor\r\n";
             this.btnAylikRapor.UseVisualStyleBackColor = false;
             // 
-            // btnKaydet
-            // 
-            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnKaydet.Location = new System.Drawing.Point(803, 575);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(89, 42);
-            this.btnKaydet.TabIndex = 20;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            // 
             // FrmInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +405,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInterface";
             this.Text = "Interface";

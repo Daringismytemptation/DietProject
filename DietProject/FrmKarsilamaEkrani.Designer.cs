@@ -123,6 +123,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmKarsilamaEkrani";
             this.Text = "KarsilamaEkrani";
