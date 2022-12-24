@@ -25,12 +25,6 @@ namespace DietProject.DAL.EntityConfigurations
             // Password one to many
             HasMany(a => a.Passwords).WithRequired(b => b.User).HasForeignKey(c => c.UserID);
 
-            // Food Details one to many
-            HasMany(a => a.FoodDetails).WithRequired(a => a.User).HasForeignKey(c => c.UserID);
-
-            // Meal many to many
-            //HasMany(a => a.Meals).WithMany(b => b.Users);
-
 
             //Choise one to many
             HasMany(a=>a.Choises).WithRequired(b=>b.User).HasForeignKey(c => c.UserID);

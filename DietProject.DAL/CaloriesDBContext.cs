@@ -24,7 +24,7 @@ namespace DietProject.DAL
         public DbSet<ExtraCalorie> ExtraCalories { get; set; }
         public DbSet<Category> Categories { get; set; }
     
-        public DbSet<UserMeal> UserMeals { get; set; }
+       
         public DbSet<Choise> Choises { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -36,7 +36,7 @@ namespace DietProject.DAL
             modelBuilder.Configurations.Add(new ExtraCalorieConfiguration());
             modelBuilder.Configurations.Add(new FoodConfiguration());
             modelBuilder.Configurations.Add(new CategoryConfiguration());
-            modelBuilder.Configurations.Add(new UserMealConfiguration());
+           
             modelBuilder.Configurations.Add(new ChoiseConffiguration());
 
 

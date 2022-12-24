@@ -14,8 +14,6 @@ namespace DietProject.Model.Entities
         public User()
         {
             Passwords = new HashSet<Password>();
-            UserMeals = new HashSet<UserMeal>();
-            FoodDetails = new HashSet<FoodDetail>();
             Choises = new HashSet<Choise>();
 
         }
@@ -39,10 +37,7 @@ namespace DietProject.Model.Entities
 
         public virtual ICollection<Password> Passwords { get; set; }
 
-        public virtual ICollection<UserMeal> UserMeals { get; set; }
-
-        public virtual ICollection<FoodDetail> FoodDetails { get; set; }
-
+     
         public virtual ICollection<Choise> Choises { get; set; }
 
     }
