@@ -102,8 +102,100 @@ namespace DietProject
                 db.Categories.Add(category);
                 db.SaveChanges();
             }
-            
-           
+
+            Food food = new Food()
+            {
+                Name = "Sufle",
+                CalorieAmountPer100gr = 387,
+                CategoryID=1,
+                
+            };
+            Food food1 = new Food()
+            {
+                Name = "Islak Kek",
+                CalorieAmountPer100gr = 357,
+                CategoryID = 1,
+
+            };
+
+            Food food2 = new Food()
+            {
+                Name = "Alabalık",
+                CalorieAmountPer100gr = 168,
+                CategoryID = 2,
+
+            };
+            Food food3 = new Food()
+            {
+                Name = "Bonfile",
+                CalorieAmountPer100gr = 400,
+                CategoryID = 2,
+
+            };
+
+            Food food4 = new Food()
+            {
+                Name = "Nohut",
+                CalorieAmountPer100gr = 410,
+                CategoryID = 3,
+
+            };
+            Food food5 = new Food()
+            {
+                Name = "Bezelye",
+                CalorieAmountPer100gr = 80,
+                CategoryID = 3,
+
+            };
+
+            Food food6 = new Food()
+            {
+                Name = "Avokado",
+                CalorieAmountPer100gr = 150,
+                CategoryID = 4,
+
+            };
+            Food food7 = new Food()
+            {
+                Name = "Mango",
+                CalorieAmountPer100gr = 60,
+                CategoryID = 4,
+
+            };
+
+            Food food8 = new Food()
+            {
+                Name = "Yumurta",
+                CalorieAmountPer100gr = 155,
+                CategoryID = 5,
+
+            };
+            Food food9 = new Food()
+            {
+                Name = "Ekmek",
+                CalorieAmountPer100gr = 220,
+                CategoryID = 5,
+
+            };
+            Food food10 = new Food()
+            {
+                Name = "Cips",
+                CalorieAmountPer100gr = 490,
+                CategoryID = 6,
+
+            };
+
+            Food food11 = new Food()
+            {
+                Name = "Tuzlu Kraker",
+                CalorieAmountPer100gr = 230,
+                CategoryID = 6,
+            };
+
+
+
+
+
 
 
 
