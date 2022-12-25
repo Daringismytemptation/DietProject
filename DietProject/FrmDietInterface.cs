@@ -130,6 +130,11 @@ namespace DietProject
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(cmbOgunler.Text) || string.IsNullOrWhiteSpace(cmbKategoriler.Text) || string.IsNullOrWhiteSpace(cmbFoodName.Text) || string.IsNullOrWhiteSpace(txtExtraCalorie.Text) || string.IsNullOrWhiteSpace(txtFoodGram.Text))
+            {
+                MessageBox.Show("lütfen ilgili alanları boş bırakmayınız ekstra aldığınız kalori yoksa dahi 0 olarak giriniz");
+                return;
+            }
             var Id = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
             Choise update = choiseService.GetByChoiseID(Id);
             update.FoodName = cmbFoodName.Text.ToString();
