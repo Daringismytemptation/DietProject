@@ -50,5 +50,11 @@ namespace DietProject.DAL.Repositories
             activatedUser.IsActive = true;
             context.SaveChanges();
         }
+
+        public List<User> CheckEmailIfExists(string eMail)
+        {
+            return context.Users.Where(x => x.Email == eMail).ToList();
+
+        }
     }
 }

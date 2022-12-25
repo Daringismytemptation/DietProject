@@ -1,4 +1,5 @@
 ﻿using DietProject.BLL.Services;
+using DietProject.DAL;
 using DietProject.Model.Entities;
 using DietProject.Model.Enum;
 using System;
@@ -16,15 +17,29 @@ namespace DietProject
     public partial class FrmKayitOl : Form
     {
         UserService userService;
+        CaloriesDBContext db;
         public FrmKayitOl()
         {
+            db = new CaloriesDBContext();
             userService= new UserService();
             InitializeComponent();
         }
 
         private void btnKayitOl_Click(object sender, EventArgs e)
         {
-           
+            string eMail = txtID.Text;
+
+           var a = userService.CheckEmailIfExists(eMail);
+            if (a.Count>0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Bu e-Mail daha önce kullanılmış");
+                return;
+            }
+
             if (txtPassword.Text != txtPasswordRepeat.Text)
             {
                 MessageBox.Show("Şifreler birbirini tutmuyor");
@@ -56,6 +71,7 @@ namespace DietProject
                 MessageBox.Show(ex.Message);
             }
             
+           
         }
      
     }
