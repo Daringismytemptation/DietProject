@@ -27,18 +27,26 @@ namespace DietProject
 
         private void btnKayitOl_Click(object sender, EventArgs e)
         {
-            string eMail = txtID.Text;
 
-           var a = userService.CheckEmailIfExists(eMail);
-            if (a.Count>0)
+
+
+
+
+            string eMail = txtID.Text.Trim();
+            try
             {
 
-            }
-            else
-            {
-                MessageBox.Show("Bu e-Mail daha önce kullanılmış");
+                var mail = userService.FindEmailIfExists(eMail);
+                MessageBox.Show("Bu E-Mail kullanımda");
                 return;
             }
+            catch (Exception)
+            {
+
+                
+               
+            }
+           
 
             if (txtPassword.Text != txtPasswordRepeat.Text)
             {

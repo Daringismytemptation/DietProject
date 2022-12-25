@@ -56,5 +56,10 @@ namespace DietProject.DAL.Repositories
             return context.Users.Where(x => x.Email == eMail).ToList();
 
         }
+        public string FindEmailIfExists(string eMail)
+        {
+           return context.Users.Where(a => a.Email.Contains(eMail)).Select(x => x.Email).First().ToString();
+        }
+
     }
 }

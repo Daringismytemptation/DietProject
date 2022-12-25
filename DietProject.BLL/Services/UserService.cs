@@ -64,5 +64,10 @@ namespace DietProject.BLL.Services
             return userRepository.CheckEmailIfExists(eMail);
         }
 
+        public string FindEmailIfExists(string email)
+        {
+            return userRepository.FindEmailIfExists(email);
+        }
+
     }
 }
