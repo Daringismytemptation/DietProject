@@ -34,6 +34,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvAdmin
@@ -43,7 +44,7 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lvAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.lvAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lvAdmin.ForeColor = System.Drawing.Color.Black;
             this.lvAdmin.FullRowSelect = true;
@@ -51,7 +52,7 @@
             this.lvAdmin.HideSelection = false;
             this.lvAdmin.Location = new System.Drawing.Point(0, 0);
             this.lvAdmin.Name = "lvAdmin";
-            this.lvAdmin.Size = new System.Drawing.Size(800, 450);
+            this.lvAdmin.Size = new System.Drawing.Size(984, 519);
             this.lvAdmin.TabIndex = 0;
             this.lvAdmin.UseCompatibleStateImageBehavior = false;
             this.lvAdmin.View = System.Windows.Forms.View.Details;
@@ -77,11 +78,22 @@
             this.columnHeader4.Text = "Durum";
             this.columnHeader4.Width = 201;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(34, 546);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 648);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lvAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -100,5 +112,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button button1;
     }
 }
