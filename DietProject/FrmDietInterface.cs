@@ -66,10 +66,7 @@ namespace DietProject
             {
                 MessageBox.Show("Eksik bilgileriniz var");
             }
-            //var tarihfiltresi = db.Choises.Where(x => x.RelevantDate == p);
-            //var userfiltresidahil = tarihfiltresi.Where(x => x.User.ID == gelenUser.ID);
-            //var sonuc = userfiltresidahil.Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
-            //dgvKullanici.DataSource = sonuc.ToList();
+            
 
         }
        void ListTheDataSource()
