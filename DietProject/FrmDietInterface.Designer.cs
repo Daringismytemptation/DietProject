@@ -392,7 +392,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 549);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.Location = new System.Drawing.Point(12, 659);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(377, 13);
             this.label7.TabIndex = 22;

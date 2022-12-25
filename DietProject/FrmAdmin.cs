@@ -63,7 +63,9 @@ namespace DietProject
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+  
+
+        private void btnSetDatabase_Click(object sender, EventArgs e)
         {
             List<string> listmeal = new List<string>();
             listmeal.Add("Sabah");
@@ -94,16 +96,16 @@ namespace DietProject
                 Category category = new Category();
                 category.Name = item;
                 db.Categories.Add(category);
-                
+
             }
 
             Food food = new Food()
             {
-                Id=1,
+                Id = 1,
                 Name = "Sufle",
                 CalorieAmountPer100gr = 387,
-                CategoryID=1,
-                
+                CategoryID = 1,
+
             };
             Food food1 = new Food()
             {
