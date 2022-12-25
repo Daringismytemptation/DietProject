@@ -59,11 +59,7 @@ namespace DietProject.BLL.Services
             CheckUserId(user);
             userRepository.ActivateUser(user);
         }
-        public List<User> CheckEmailIfExists(string eMail)
-        {
-            return userRepository.CheckEmailIfExists(eMail);
-        }
-
+     
         public string FindEmailIfExists(string email)
         {
             return userRepository.FindEmailIfExists(email);
