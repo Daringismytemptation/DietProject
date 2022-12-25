@@ -56,6 +56,7 @@
             this.btnAylikRapor = new System.Windows.Forms.Button();
             this.btnFoodCollection = new System.Windows.Forms.Button();
             this.btnDailyReport = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
@@ -388,6 +389,15 @@
             this.btnDailyReport.UseVisualStyleBackColor = false;
             this.btnDailyReport.Click += new System.EventHandler(this.btnDailyReport_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 549);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(377, 13);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Haftalık ve Aylık Rapor Seçilen Tarihten  Geriye Olacak Şekilde Çalışmaktadır .";
+            // 
             // FrmInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +405,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1287, 681);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAylikRapor);
             this.Controls.Add(this.btnHaftalikRapor);
             this.Controls.Add(this.groupBox2);
@@ -414,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanici)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -446,5 +458,6 @@
         private System.Windows.Forms.Button btnDailyReport;
         private System.Windows.Forms.Button btnFoodCollection;
         private System.Windows.Forms.DataGridView dgvReports;
+        private System.Windows.Forms.Label label7;
     }
 }
