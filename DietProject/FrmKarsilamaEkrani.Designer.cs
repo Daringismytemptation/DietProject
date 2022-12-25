@@ -35,6 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnBaslat = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -110,6 +111,19 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Diyetine Başla";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.linkLabel1.Location = new System.Drawing.Point(697, 314);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(89, 17);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Şifre Değiştir";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FrmKarsilamaEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,6 +131,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(798, 340);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnBaslat);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -142,5 +157,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBaslat;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

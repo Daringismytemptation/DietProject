@@ -38,6 +38,12 @@ namespace DietProject
             lblKullanici.Text = gelenKullanici;
         }
 
-       
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmChangePassword frmChangePassword = new frmChangePassword(GelenUser);
+            this.Hide();
+            frmChangePassword.ShowDialog();
+            this.Show();
+        }
     }
 }

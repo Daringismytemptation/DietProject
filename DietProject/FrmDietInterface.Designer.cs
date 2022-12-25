@@ -34,10 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnHaftalikRapor = new System.Windows.Forms.Button();
-            this.btnAylikRapor = new System.Windows.Forms.Button();
-            this.btnFoodCollection = new System.Windows.Forms.Button();
-            this.btnDailyReport = new System.Windows.Forms.Button();
             this.dgvReports = new System.Windows.Forms.DataGridView();
             this.txtExtraCalorie = new System.Windows.Forms.TextBox();
             this.txtFoodGram = new System.Windows.Forms.TextBox();
@@ -56,6 +52,10 @@
             this.cmbFoodName = new System.Windows.Forms.ComboBox();
             this.cmbKategoriler = new System.Windows.Forms.ComboBox();
             this.cmbOgunler = new System.Windows.Forms.ComboBox();
+            this.btnHaftalikRapor = new System.Windows.Forms.Button();
+            this.btnAylikRapor = new System.Windows.Forms.Button();
+            this.btnFoodCollection = new System.Windows.Forms.Button();
+            this.btnDailyReport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
@@ -140,62 +140,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Programım";
-            // 
-            // btnHaftalikRapor
-            // 
-            this.btnHaftalikRapor.BackColor = System.Drawing.Color.Transparent;
-            this.btnHaftalikRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHaftalikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHaftalikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnHaftalikRapor.Location = new System.Drawing.Point(12, 466);
-            this.btnHaftalikRapor.Name = "btnHaftalikRapor";
-            this.btnHaftalikRapor.Size = new System.Drawing.Size(104, 63);
-            this.btnHaftalikRapor.TabIndex = 4;
-            this.btnHaftalikRapor.Text = "Haftalık Rapor\r\n";
-            this.btnHaftalikRapor.UseVisualStyleBackColor = false;
-            this.btnHaftalikRapor.Click += new System.EventHandler(this.btnHaftalikRapor_Click);
-            // 
-            // btnAylikRapor
-            // 
-            this.btnAylikRapor.BackColor = System.Drawing.Color.Transparent;
-            this.btnAylikRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAylikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAylikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnAylikRapor.Location = new System.Drawing.Point(162, 466);
-            this.btnAylikRapor.Name = "btnAylikRapor";
-            this.btnAylikRapor.Size = new System.Drawing.Size(104, 63);
-            this.btnAylikRapor.TabIndex = 5;
-            this.btnAylikRapor.Text = "Aylık Rapor\r\n";
-            this.btnAylikRapor.UseVisualStyleBackColor = false;
-            this.btnAylikRapor.Click += new System.EventHandler(this.btnAylikRapor_Click);
-            // 
-            // btnFoodCollection
-            // 
-            this.btnFoodCollection.BackColor = System.Drawing.Color.Transparent;
-            this.btnFoodCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoodCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnFoodCollection.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnFoodCollection.Location = new System.Drawing.Point(162, 336);
-            this.btnFoodCollection.Name = "btnFoodCollection";
-            this.btnFoodCollection.Size = new System.Drawing.Size(104, 63);
-            this.btnFoodCollection.TabIndex = 5;
-            this.btnFoodCollection.Text = "Yemek Ceşidi Raporu";
-            this.btnFoodCollection.UseVisualStyleBackColor = false;
-            this.btnFoodCollection.Click += new System.EventHandler(this.btnFoodCollection_Click);
-            // 
-            // btnDailyReport
-            // 
-            this.btnDailyReport.BackColor = System.Drawing.Color.Transparent;
-            this.btnDailyReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDailyReport.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnDailyReport.Location = new System.Drawing.Point(12, 336);
-            this.btnDailyReport.Name = "btnDailyReport";
-            this.btnDailyReport.Size = new System.Drawing.Size(104, 63);
-            this.btnDailyReport.TabIndex = 4;
-            this.btnDailyReport.Text = "Günlük Rapor";
-            this.btnDailyReport.UseVisualStyleBackColor = false;
-            this.btnDailyReport.Click += new System.EventHandler(this.btnDailyReport_Click);
             // 
             // dgvReports
             // 
@@ -387,6 +331,62 @@
             this.cmbOgunler.Name = "cmbOgunler";
             this.cmbOgunler.Size = new System.Drawing.Size(121, 21);
             this.cmbOgunler.TabIndex = 0;
+            // 
+            // btnHaftalikRapor
+            // 
+            this.btnHaftalikRapor.BackColor = System.Drawing.Color.Transparent;
+            this.btnHaftalikRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHaftalikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHaftalikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnHaftalikRapor.Location = new System.Drawing.Point(12, 466);
+            this.btnHaftalikRapor.Name = "btnHaftalikRapor";
+            this.btnHaftalikRapor.Size = new System.Drawing.Size(104, 63);
+            this.btnHaftalikRapor.TabIndex = 4;
+            this.btnHaftalikRapor.Text = "Haftalık Rapor\r\n";
+            this.btnHaftalikRapor.UseVisualStyleBackColor = false;
+            this.btnHaftalikRapor.Click += new System.EventHandler(this.btnHaftalikRapor_Click);
+            // 
+            // btnAylikRapor
+            // 
+            this.btnAylikRapor.BackColor = System.Drawing.Color.Transparent;
+            this.btnAylikRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAylikRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAylikRapor.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnAylikRapor.Location = new System.Drawing.Point(162, 466);
+            this.btnAylikRapor.Name = "btnAylikRapor";
+            this.btnAylikRapor.Size = new System.Drawing.Size(104, 63);
+            this.btnAylikRapor.TabIndex = 5;
+            this.btnAylikRapor.Text = "Aylık Rapor\r\n";
+            this.btnAylikRapor.UseVisualStyleBackColor = false;
+            this.btnAylikRapor.Click += new System.EventHandler(this.btnAylikRapor_Click);
+            // 
+            // btnFoodCollection
+            // 
+            this.btnFoodCollection.BackColor = System.Drawing.Color.Transparent;
+            this.btnFoodCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoodCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFoodCollection.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnFoodCollection.Location = new System.Drawing.Point(162, 336);
+            this.btnFoodCollection.Name = "btnFoodCollection";
+            this.btnFoodCollection.Size = new System.Drawing.Size(104, 63);
+            this.btnFoodCollection.TabIndex = 5;
+            this.btnFoodCollection.Text = "Yemek Ceşidi Raporu";
+            this.btnFoodCollection.UseVisualStyleBackColor = false;
+            this.btnFoodCollection.Click += new System.EventHandler(this.btnFoodCollection_Click);
+            // 
+            // btnDailyReport
+            // 
+            this.btnDailyReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnDailyReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDailyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDailyReport.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnDailyReport.Location = new System.Drawing.Point(12, 336);
+            this.btnDailyReport.Name = "btnDailyReport";
+            this.btnDailyReport.Size = new System.Drawing.Size(104, 63);
+            this.btnDailyReport.TabIndex = 4;
+            this.btnDailyReport.Text = "Günlük Rapor";
+            this.btnDailyReport.UseVisualStyleBackColor = false;
+            this.btnDailyReport.Click += new System.EventHandler(this.btnDailyReport_Click);
             // 
             // FrmInterface
             // 
