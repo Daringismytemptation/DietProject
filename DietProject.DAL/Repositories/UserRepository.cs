@@ -24,7 +24,7 @@ namespace DietProject.DAL.Repositories
         }
         public User CheckLogin(string userName, string password)
         {
-            User user = context.Users.Where(a => a.FirstName == userName).SingleOrDefault();
+            User user = context.Users.Where(a => a.Email == userName).SingleOrDefault();
             if (user != null)
             {
                 Password userPassword = passwordRepository.GetActivePassword(user.ID);
