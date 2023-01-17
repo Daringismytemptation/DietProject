@@ -120,12 +120,21 @@ namespace DietProject
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            var a= Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
-            choiseService.Delete(a);
-            // var c = db.Choises.Where(x => x.ID == a).FirstOrDefault();
-            //db.Choises.Remove(c);
-            //db.SaveChanges();
-            btnGoruntule.PerformClick();
+            if (dgvKullanici.CurrentCell.RowIndex>0)
+            {
+                var a = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
+                choiseService.Delete(a);
+                // var c = db.Choises.Where(x => x.ID == a).FirstOrDefault();
+                //db.Choises.Remove(c);
+                //db.SaveChanges();
+                btnGoruntule.PerformClick();
+                
+            }
+            else
+            {
+                MessageBox.Show("kanka önce doldur ");
+            }
+
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
