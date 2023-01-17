@@ -157,6 +157,7 @@
             this.txtExtraCalorie.Name = "txtExtraCalorie";
             this.txtExtraCalorie.Size = new System.Drawing.Size(119, 20);
             this.txtExtraCalorie.TabIndex = 21;
+            this.txtExtraCalorie.Text = "0";
             this.txtExtraCalorie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFoodGram_KeyPress);
             // 
             // txtFoodGram
