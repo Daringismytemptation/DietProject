@@ -170,6 +170,11 @@
             // nudHeight
             // 
             this.nudHeight.Location = new System.Drawing.Point(128, 143);
+            this.nudHeight.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.nudHeight.Name = "nudHeight";
             this.nudHeight.Size = new System.Drawing.Size(120, 20);
             this.nudHeight.TabIndex = 8;
@@ -177,6 +182,11 @@
             // nudKilo
             // 
             this.nudKilo.Location = new System.Drawing.Point(128, 117);
+            this.nudKilo.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.nudKilo.Name = "nudKilo";
             this.nudKilo.Size = new System.Drawing.Size(120, 20);
             this.nudKilo.TabIndex = 8;
