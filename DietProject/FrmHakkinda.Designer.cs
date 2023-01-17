@@ -87,6 +87,7 @@
             this.Name = "FrmHakkinda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About Us";
+            this.Load += new System.EventHandler(this.FrmHakkinda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

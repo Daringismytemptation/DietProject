@@ -19,7 +19,12 @@ namespace DietProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hazırlayanlar:\n , \n , \n , \n ");
+            MessageBox.Show("Hazırlayanlar:\n  \n Mertcan Akçamur \n Ege Sümer  \n Batuhan Bedir");
+        }
+
+        private void FrmHakkinda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
