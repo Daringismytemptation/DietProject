@@ -49,27 +49,35 @@ namespace DietProject
             }
             try
             {
-                var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
-                Choise choise = new Choise();
-                choise.Meal = cmbOgunler.SelectedItem.ToString();
-                choise.Category = cmbKategoriler.SelectedItem.ToString();
-                choise.FoodName = cmbFoodName.SelectedItem.ToString();
-                choise.Portion = Convert.ToDecimal(txtFoodGram.Text) / 100 * d;
-                choise.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
-                choise.RelevantDate = dtpTarih.Value;
-                choise.UserID = gelenUser.ID;
-                choiseService.Insert(choise);
-                ListTheDataSource();
-                btnGuncelle.Enabled = btnSil.Enabled = false;
+                if(cmbFoodName.Items.Contains(cmbFoodName.Text) && cmbKategoriler.Items.Contains(cmbKategoriler.Text) && cmbOgunler.Items.Contains(cmbOgunler.Text))
+                {
+                    var d = choiseService.GetCalorie(cmbFoodName.SelectedItem.ToString());
+                    Choise choise = new Choise();
+                    choise.Meal = cmbOgunler.Text;
+                    choise.Category = cmbKategoriler.Text;
+                    choise.FoodName = cmbFoodName.Text;
+                    choise.Portion = Convert.ToDecimal(txtFoodGram.Text) / 100 * d;
+                    choise.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
+                    choise.RelevantDate = dtpTarih.Value;
+                    choise.UserID = gelenUser.ID;
+                    choiseService.Insert(choise);
+                    ListTheDataSource();
+                    btnGuncelle.Enabled = btnSil.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("lütfen cmboboxdaki yazılara müdahale etmeyin");
+                }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Eksik bilgileriniz var");
             }
-            
+
 
         }
-       void ListTheDataSource()
+        void ListTheDataSource()
         {
             var p = dtpTarih.Value;
             dgvKullanici.DataSource = db.Choises.Where(a => a.RelevantDate == p && a.User.ID == gelenUser.ID).Select(x => new { x.ID, x.Meal, x.Category, x.FoodName, x.Portion, x.ExtraCalori, ToplamKalori = (x.ExtraCalori + x.Portion) }).ToList();
@@ -103,7 +111,7 @@ namespace DietProject
         {
             cmbFoodName.SelectedIndex = -1;
             cmbFoodName.Items.Clear();
-            
+
             string categoryName = cmbKategoriler.SelectedItem.ToString();
             var foods = foodService.foods(categoryName);
             foreach (var item in foods)
@@ -120,7 +128,7 @@ namespace DietProject
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (dgvKullanici.CurrentCell.RowIndex>0)
+            if (dgvKullanici.CurrentCell.RowIndex > 0)
             {
                 var a = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
                 choiseService.Delete(a);
@@ -128,7 +136,7 @@ namespace DietProject
                 //db.Choises.Remove(c);
                 //db.SaveChanges();
                 btnGoruntule.PerformClick();
-                
+
             }
             else
             {
@@ -144,24 +152,33 @@ namespace DietProject
                 MessageBox.Show("lütfen ilgili alanları boş bırakmayınız ekstra aldığınız kalori yoksa dahi 0 olarak giriniz");
                 return;
             }
-            var Id = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
-            Choise update = choiseService.GetByChoiseID(Id);
-            update.FoodName = cmbFoodName.Text.ToString();
-            update.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
+            if (cmbFoodName.Items.Contains(cmbFoodName.Text) && cmbKategoriler.Items.Contains(cmbKategoriler.Text) && cmbOgunler.Items.Contains(cmbOgunler.Text))
+            {
+                var Id = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
+                Choise update = choiseService.GetByChoiseID(Id);
+                update.FoodName = cmbFoodName.Text.ToString();
+                update.ExtraCalori = Convert.ToDecimal(txtExtraCalorie.Text);
 
-            var d = choiseService.GetCalorie(cmbFoodName.Text.ToString());
-            update.Portion = Convert.ToDecimal(txtFoodGram.Text) / 100 * d;
+                var d = choiseService.GetCalorie(cmbFoodName.Text.ToString());
+                update.Portion = Convert.ToDecimal(txtFoodGram.Text) / 100 * d;
 
-            update.Category = cmbKategoriler.Text.ToString();
-            update.Meal = cmbOgunler.Text.ToString();
-            choiseService.Update(update);
+                update.Category = cmbKategoriler.Text.ToString();
+                update.Meal = cmbOgunler.Text.ToString();
+                choiseService.Update(update);
 
-            btnGoruntule.PerformClick();
+                btnGoruntule.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("lütfen comboboxlara deger yazmayın değer seçin");
+            }
+
+           
         }
 
         private void dgvKullanici_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void dgvKullanici_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -182,7 +199,7 @@ namespace DietProject
 
         private void btnDailyReport_Click(object sender, EventArgs e)
         {
-           
+
 
             dgvReports.DataSource = db.Choises.Where(a => a.User.ID == gelenUser.ID && a.RelevantDate == dtpTarih.Value).GroupBy(a => a.Meal).Select(group => new
             {
@@ -194,7 +211,7 @@ namespace DietProject
         private void btnHaftalikRapor_Click(object sender, EventArgs e)
         {
 
-            
+
 
             var b = dtpTarih.Value.AddDays(-7);
             var date = db.Choises.Where(a => a.RelevantDate >= b && a.RelevantDate <= dtpTarih.Value).GroupBy(a => new { a.Meal, a.Category }).Select(group => new
@@ -238,7 +255,7 @@ namespace DietProject
 
 
 
-            }).OrderByDescending(x=>x.YenmeAdedi).ToList();
+            }).OrderByDescending(x => x.YenmeAdedi).ToList();
             dgvReports.DataSource = date;
         }
 
