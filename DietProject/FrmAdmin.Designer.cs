@@ -34,7 +34,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSetDatabase = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvAdmin
@@ -78,25 +77,11 @@
             this.columnHeader4.Text = "Durum";
             this.columnHeader4.Width = 201;
             // 
-            // btnSetDatabase
-            // 
-            this.btnSetDatabase.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSetDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSetDatabase.Location = new System.Drawing.Point(51, 553);
-            this.btnSetDatabase.Name = "btnSetDatabase";
-            this.btnSetDatabase.Size = new System.Drawing.Size(129, 62);
-            this.btnSetDatabase.TabIndex = 2;
-            this.btnSetDatabase.Text = "Veritabanını İşle";
-            this.btnSetDatabase.UseVisualStyleBackColor = false;
-            this.btnSetDatabase.Click += new System.EventHandler(this.btnSetDatabase_Click);
-            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 648);
-            this.Controls.Add(this.btnSetDatabase);
             this.Controls.Add(this.lvAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -115,6 +100,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button btnSetDatabase;
     }
 }
