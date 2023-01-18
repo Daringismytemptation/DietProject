@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,7 +31,7 @@ namespace DietProject
             try
             {
                 Password activePassword = passwordService.GetActivePassword(user.ID);
-                if (txtEskiSifre.Text != activePassword.UserPassword)
+                if (Encode(txtEskiSifre.Text) != activePassword.UserPassword)
                 {
                     MessageBox.Show("Mevcut şifrenizi hatalı girdiniz");
                     return;
@@ -43,7 +45,7 @@ namespace DietProject
 
                 bool check = passwordService.Insert(new Password()
                 {
-                    UserPassword = txtyeniSifre.Text,
+                    UserPassword = Encode(txtyeniSifre.Text),
                     UserID = user.ID
                 });
                 MessageBox.Show(check ? "Şifre değiştirildi" : "Şifre değiştirileMEdi");
@@ -52,6 +54,34 @@ namespace DietProject
             {
 
                 MessageBox.Show(ex.Message);
+            }
+        }
+        public string Encode(string password)
+        {
+            try
+            {
+                string ourText = password;
+                string Return = null;
+                string _key = "abcdefgh";
+                string privatekey = "hgfedcba";
+                byte[] privatekeyByte = { };
+                privatekeyByte = Encoding.UTF8.GetBytes(privatekey);
+                byte[] _keybyte = { };
+                _keybyte = Encoding.UTF8.GetBytes(_key);
+                byte[] inputtextbyteArray = System.Text.Encoding.UTF8.GetBytes(ourText);
+                using (DESCryptoServiceProvider dsp = new DESCryptoServiceProvider())
+                {
+                    var memstr = new MemoryStream();
+                    var crystr = new CryptoStream(memstr, dsp.CreateEncryptor(_keybyte, privatekeyByte), CryptoStreamMode.Write);
+                    crystr.Write(inputtextbyteArray, 0, inputtextbyteArray.Length);
+                    crystr.FlushFinalBlock();
+                    return Convert.ToBase64String(memstr.ToArray());
+                }
+                return Return;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
             }
         }
     }
