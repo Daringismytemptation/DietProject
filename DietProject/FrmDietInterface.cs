@@ -185,18 +185,22 @@ namespace DietProject
 
         private void dgvKullanici_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var Id = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
-            var choice = choiseService.SelectChoice(Id);
+            if (Convert.ToInt32(dgvKullanici.SelectedCells.Count)>0)
+            {
+                var Id = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
+                var choice = choiseService.SelectChoice(Id);
 
-            cmbFoodName.Text = choice.FoodName;
-            var d = choiseService.GetCalorie(cmbFoodName.Text);
+                cmbFoodName.Text = choice.FoodName;
+                var d = choiseService.GetCalorie(cmbFoodName.Text);
 
-            cmbKategoriler.Text = choice.Category;
-            cmbOgunler.Text = choice.Meal;
-            txtExtraCalorie.Text = choice.ExtraCalori.ToString();
-            txtFoodGram.Text = ((choice.Portion * 100) / d).ToString();
-            btnGuncelle.Enabled = true;
-            btnSil.Enabled = true;
+                cmbKategoriler.Text = choice.Category;
+                cmbOgunler.Text = choice.Meal;
+                txtExtraCalorie.Text = choice.ExtraCalori.ToString();
+                txtFoodGram.Text = ((choice.Portion * 100) / d).ToString();
+                btnGuncelle.Enabled = true;
+                btnSil.Enabled = true;
+            }
+            
         }
 
         private void btnDailyReport_Click(object sender, EventArgs e)
