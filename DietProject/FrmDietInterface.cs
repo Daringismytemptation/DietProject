@@ -136,6 +136,8 @@ namespace DietProject
                 //db.Choises.Remove(c);
                 //db.SaveChanges();
                 btnGoruntule.PerformClick();
+                btnSil.Enabled= false;
+                
 
             }
             else
