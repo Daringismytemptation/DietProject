@@ -128,7 +128,7 @@ namespace DietProject
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (dgvKullanici.CurrentCell.RowIndex > 0)
+            if (dgvKullanici.CurrentCell.RowIndex >= 0)
             {
                 var a = Convert.ToInt32(dgvKullanici.SelectedCells[0].Value);
                 choiseService.Delete(a);
