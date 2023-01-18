@@ -39,9 +39,6 @@
             this.txtFoodGram = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvKullanici = new System.Windows.Forms.DataGridView();
-            this.btnAdi = new System.Windows.Forms.Button();
-            this.btnKategori = new System.Windows.Forms.Button();
-            this.btnOgun = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
@@ -119,9 +116,6 @@
             this.groupBox2.Controls.Add(this.txtFoodGram);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.dgvKullanici);
-            this.groupBox2.Controls.Add(this.btnAdi);
-            this.groupBox2.Controls.Add(this.btnKategori);
-            this.groupBox2.Controls.Add(this.btnOgun);
             this.groupBox2.Controls.Add(this.btnSil);
             this.groupBox2.Controls.Add(this.btnEkle);
             this.groupBox2.Controls.Add(this.btnGuncelle);
@@ -141,6 +135,7 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Programım";
+            
             // 
             // dgvReports
             // 
@@ -191,36 +186,6 @@
             this.dgvKullanici.TabIndex = 13;
             this.dgvKullanici.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellClick);
             this.dgvKullanici.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanici_CellValueChanged);
-            // 
-            // btnAdi
-            // 
-            this.btnAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdi.Location = new System.Drawing.Point(278, 162);
-            this.btnAdi.Name = "btnAdi";
-            this.btnAdi.Size = new System.Drawing.Size(27, 20);
-            this.btnAdi.TabIndex = 11;
-            this.btnAdi.Text = "...\r\n";
-            this.btnAdi.UseVisualStyleBackColor = true;
-            // 
-            // btnKategori
-            // 
-            this.btnKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKategori.Location = new System.Drawing.Point(278, 133);
-            this.btnKategori.Name = "btnKategori";
-            this.btnKategori.Size = new System.Drawing.Size(27, 20);
-            this.btnKategori.TabIndex = 10;
-            this.btnKategori.Text = "...\r\n";
-            this.btnKategori.UseVisualStyleBackColor = true;
-            // 
-            // btnOgun
-            // 
-            this.btnOgun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOgun.Location = new System.Drawing.Point(278, 104);
-            this.btnOgun.Name = "btnOgun";
-            this.btnOgun.Size = new System.Drawing.Size(27, 20);
-            this.btnOgun.TabIndex = 4;
-            this.btnOgun.Text = "...\r\n";
-            this.btnOgun.UseVisualStyleBackColor = true;
             // 
             // btnSil
             // 
@@ -448,9 +413,6 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnAdi;
-        private System.Windows.Forms.Button btnKategori;
-        private System.Windows.Forms.Button btnOgun;
         private System.Windows.Forms.Button btnHaftalikRapor;
         private System.Windows.Forms.Button btnAylikRapor;
         private System.Windows.Forms.Button btnGoruntule;
